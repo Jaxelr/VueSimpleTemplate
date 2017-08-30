@@ -1,11 +1,10 @@
 {
     "author": "Jaxel Rojas",
     "classifications": [
-        "Vue",
-        "Vue Template",
-        "VueJs"
+        "Vue.Js",
+        "SPA"
     ],
-    "name": "VueJs Template with .Net Core",
+    "name": "ASP.Net Core with Vue.js",
     "identity": "Vue.Template",
     "shortName": "vueTemplate",
     "tags": {
