@@ -1,0 +1,15 @@
+{
+    "author": "Jaxel Rojas",
+    "classifications": [
+        "Vue",
+        "Vue Template",
+        "VueJs"
+    ],
+    "name": "VueJs Template with .Net Core",
+    "identity": "Vue.Template",
+    "shortName": "vueTemplate",
+    "tags": {
+        "language": "C#"
+    },
+    "sourceName": "VueTemplate"
+}
