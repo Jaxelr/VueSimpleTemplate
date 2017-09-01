@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>VueTemplate</id>
+    <version>0.1.0</version>
+    <title>Vue dotnet new templates</title>
+    <description>A template for Vue Js using Asp.Net Core and Webpack</description>
+    <authors>Jaxel Rojas</authors>
+    <owners>Jaxel Rojas</owners>
+    <projectUrl>https://github.com/Jaxelr/VueTemplate</projectUrl>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes></releaseNotes>
+    <tags>template Vue</tags>
+    <language>en-US</language>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+  <files>
+    <file src="Content\**" exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\*.lock.json" target="content"/>
+  </files>
+</package>
