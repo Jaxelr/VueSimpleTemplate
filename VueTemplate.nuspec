@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package>
   <metadata>
-    <id>VueTemplate</id>
-    <version>0.1.0</version>
+    <id>Vue.Template</id>
+    <version>0.1.1</version>
     <title>Vue dotnet new templates</title>
-    <description>A template for Vue Js using Asp.Net Core and Webpack</description>
+    <description>A template for Vue Js using Asp.Net Core 2.0.0 and Webpack 3.0</description>
     <authors>Jaxel Rojas</authors>
     <owners>Jaxel Rojas</owners>
     <projectUrl>https://github.com/Jaxelr/VueTemplate</projectUrl>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes></releaseNotes>
-    <tags>template Vue</tags>
+    <tags>template Vue Vuejs</tags>
     <language>en-US</language>
     <packageTypes>
       <packageType name="Template" />
