@@ -2,7 +2,18 @@
 
 This template was created to use vue .Js with asp.net core using the SPA services. It tries to be minimalistic with the approach. It also favors Vue's single component files instead of using Typescript.
 
-To install the template locally execute the following command with the dotnet command
+To install the template locally, clone the repository and execute the following command with the dotnet command, using the path of the repo:
 
 `dotnet new -i $PATH_OF_REPO`
 
+or you can use the nuget version:
+
+`dotnet new -i Vue.Template::*`
+
+where * is the nomenclature for the latest version of the template. 
+
+Once downloaded the configuration instructions are to run:
+
+`npm install`
+
+Using the SpaServices from Asp.Net Core it will execute the webpack configurations once you build the site.
