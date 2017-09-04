@@ -51,7 +51,7 @@ namespace VueTemplate
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
 
-                routes.MapSpaFallbackRoute("fallback", new { controller = "Home", action = "Index" });
+                routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Home", action = "Index" });
             });
         }
     }
