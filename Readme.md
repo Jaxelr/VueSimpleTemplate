@@ -1,6 +1,6 @@
-# Vue Template
+# Vue Simple Template
 
-This template was created to use vue .Js with asp.net core using the SPA services. It tries to be minimalistic with the approach. It also favors Vue's single component files instead of using Typescript.
+This template was created to use vue .Js with asp.net core using the SPA services. It tries to be minimalistic with its approach. It also favors Vue's single component files over Typescript. 
 
 To install the template locally, clone the repository and execute the following command with the dotnet command, using the path of the repo:
 
@@ -8,7 +8,7 @@ To install the template locally, clone the repository and execute the following 
 
 or you can use the nuget version:
 
-`dotnet new -i Vue.Template::*`
+`dotnet new -i Vue.Simple.Template::*`
 
 where * is the nomenclature for the latest version of the template. 
 
