@@ -4,9 +4,9 @@
         "Vue.Js",
         "SPA"
     ],
-    "name": "ASP.Net Core with Vue.js",
-    "identity": "Vue.Template",
-    "shortName": "vueTemplate",
+    "name": "Barebones ASP.Net Core with Vue.js",
+    "identity": "Vue.Simple.Template",
+    "shortName": "simplevue",
     "tags": {
         "language": "C#"
     },
