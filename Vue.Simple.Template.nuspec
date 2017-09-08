@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package>
   <metadata>
-    <id>Vue.Template</id>
-    <version>0.1.1</version>
+    <id>Vue.Simple.Template</id>
+    <version>0.1.4</version>
     <title>Vue dotnet new templates</title>
-    <description>A template for Vue Js using Asp.Net Core 2.0.0 and Webpack 3.0</description>
+    <description>A barebone template for Vue Js using Asp.Net Core 2.0.0 and Webpack 3.0 that contains Server Side Rendering and Hot Module Reloading</description>
     <authors>Jaxel Rojas</authors>
     <owners>Jaxel Rojas</owners>
     <projectUrl>https://github.com/Jaxelr/VueTemplate</projectUrl>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>Added Server Side Rendering.</releaseNotes>
     <tags>template Vue Vuejs</tags>
     <language>en-US</language>
     <packageTypes>
@@ -18,6 +18,6 @@
     </packageTypes>
   </metadata>
   <files>
-    <file src="Content\**" exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\*.lock.json" target="content"/>
+    <file src="Content\**" exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\*.lock.json;**\node_modules\**" target="content"/>
   </files>
 </package>
