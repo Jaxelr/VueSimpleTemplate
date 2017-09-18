@@ -2,6 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 
+function resolve(dir) {
+    return path.join(__dirname, dir)
+}
+
 module.exports = (env) => {
     const config = () => ({
         output: {
@@ -31,7 +35,20 @@ module.exports = (env) => {
                     test: /\.ico$/i,
                     loader: "file-loader?name=favicon.[ext]"
                 },
+                {
+                    test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                    loader: 'url-loader?fonts/[name].[hash:7].[ext]',
+                    options: {
+                      limit: 10000
+                    }
+                }
             ]
+        },
+        resolve: {
+            extensions: ['.js', '.vue', '.json'],
+            alias: {
+              '@': resolve('ClientApp')
+            }
         },
         devtool: '#eval-source-map'
     });
@@ -40,7 +57,7 @@ module.exports = (env) => {
     const clientConfig = merge(config(), {
         entry: { 'main-client': './ClientApp/build/client.js' },
         output: {
-            path: path.join(__dirname, clientOutputDir)
+            path: resolve(clientOutputDir)
         }
     });
 
@@ -49,7 +66,7 @@ module.exports = (env) => {
         entry: { 'main-server': './ClientApp/build/server.js' },
         output: {
             libraryTarget: 'commonjs2',
-            path: path.join(__dirname, 'wwwroot/dist')
+            path: resolve('wwwroot/dist')
         },
         module: {
             rules: [
