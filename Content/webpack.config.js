@@ -27,8 +27,13 @@ module.exports = (env) => {
                     test: /\.(jpe?g|png|gif|svg)$/i,
                     loader: "file-loader?name=assets/[name].[ext]"
                 },
+                {
+                    test: /\.ico$/i,
+                    loader: "file-loader?name=favicon.[ext]"
+                },
             ]
-        }
+        },
+        devtool: '#eval-source-map'
     });
 
     const clientOutputDir = './wwwroot/dist';
@@ -57,4 +62,24 @@ module.exports = (env) => {
     });
 
     return [clientConfig, serverConfig];
+}
+
+if (process.env.NODE_ENV === 'production') {
+    module.exports.devtool = '#source-map'
+    module.exports.plugins = (module.exports.plugins || []).concat([
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: '"production"'
+        }
+      }),
+      new webpack.optimize.UglifyJsPlugin({
+        sourceMap: true,
+        compress: {
+          warnings: false
+        }
+      }),
+      new webpack.LoaderOptionsPlugin({
+        minimize: true
+      })
+    ])
 }
