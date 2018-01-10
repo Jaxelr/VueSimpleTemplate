@@ -2,7 +2,7 @@
 
 This template was created to use vue .Js with asp.net core using the SPA services. It tries to be minimalistic with its approach. It also favors Vue's single component files over Typescript. 
 
-For the full fledge Vue Spa Service template, check [here](https://github.com/aspnet/JavaScriptServices/tree/dev/templates/Microsoft.AspNetCore.SpaTemplates/vue)
+For the full fledge Vue Spa Service template, check [here](https://github.com/aspnet/JavaScriptServices/tree/release/2.0.0/templates/VueSpa)
 
 To install the template locally, clone the repository and execute the following command with the dotnet command, using the path of the repo:
 
