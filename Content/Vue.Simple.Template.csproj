@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
+    <PackageId>Vue.Simple.Template</PackageId>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <Version>0.1.4</Version>
     <Description>A template for Vue Js using Asp.Net Core and Webpack</Description>
