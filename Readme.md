@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/infk8356yyag6im4?svg=true)](https://ci.appveyor.com/project/Jaxelr/vuetemplate)
+
 # Vue Simple Template
 
 This template was created to use vue .Js with asp.net core using the SPA services. It tries to be minimalistic with its approach. It also favors Vue's single component files over Typescript. 

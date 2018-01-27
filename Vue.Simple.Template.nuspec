@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Vue.Simple.Template</id>
-    <version>0.1.4</version>
+    <version>0.1.5</version>
     <title>Vue dotnet new templates</title>
     <description>A barebone template for Vue Js using Asp.Net Core 2.0.0 and Webpack 3.0 that contains Server Side Rendering and Hot Module Reloading</description>
     <authors>Jaxel Rojas</authors>

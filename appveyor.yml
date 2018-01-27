@@ -1,0 +1,12 @@
+version: '1.0.{build}'
+image: Visual Studio 2017
+branches:
+  only:
+  - master
+init:
+  - cmd: git config --global core.autocrlf true
+before_build:
+  - cmd: dotnet --version
+  - cmd: dotnet restore 
+build_script:
+- cmd: dotnet publish --no-restore --configuration Release
