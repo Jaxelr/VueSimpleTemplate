@@ -10,7 +10,8 @@
     <projectUrl>https://github.com/Jaxelr/VueTemplate</projectUrl>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Added Server Side Rendering.</releaseNotes>
+    <releaseNotes>Updated to vue 2.5.X.</releaseNotes>
+    <copyright>2017</copyright>
     <tags>template Vue Vuejs</tags>
     <language>en-US</language>
     <packageTypes>
