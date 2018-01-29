@@ -16,8 +16,13 @@ or you can use the nuget version:
 
 where * is the nomenclature for the latest version of the template. 
 
-Once downloaded the configuration instructions are to run:
+Once downloaded you can properly create the project from the template with:
 
+`dotnet new simplevue -o MyAppName` 
+
+Then proceed to:
+
+`cd MyAppName`
 `npm install`
 
 Using the SpaServices from AspNet Core it will execute the webpack configurations once you build the site.
