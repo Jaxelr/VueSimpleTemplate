@@ -12,3 +12,5 @@ before_build:
   - cmd: dotnet restore 
 build_script:
 - cmd: dotnet publish --no-restore --configuration Release
+artifacts:
+  - path: '**\*.nupkg'
