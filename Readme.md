@@ -4,7 +4,8 @@
 
 This template was created to use vue.js with asp.net core using the library [Javascript Script Services](https://github.com/aspnet/JavaScriptServices). It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template. 
 
-For the full fledge Vue Spa Service template, check [here](https://github.com/aspnet/templating/tree/dev/src/Microsoft.AspNetCore.SpaTemplates/content/Vue-CSharp) _note:_ the template has been announced as retired by the ms team:  https://github.com/aspnet/Announcements/issues/289
+For the full fledge Vue Spa Service template, check [here](https://github.com/aspnet/templating/tree/dev/src/Microsoft.AspNetCore.SpaTemplates/content/Vue-CSharp)   
+_Note on the ms template:_ the template has been announced as retired by the ms team:  https://github.com/aspnet/Announcements/issues/289 
 
 ## Installation
 
