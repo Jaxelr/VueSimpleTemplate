@@ -9,8 +9,11 @@ init:
   - cmd: git config --global core.autocrlf true
 before_build:
   - cmd: dotnet --version
-  - cmd: dotnet restore 
+  - cmd: dotnet restore --verbosity quiet
 build_script:
-- cmd: dotnet publish --no-restore --configuration Release
+- cmd: dotnet publish --configuration Release --verbosity quiet
 artifacts:
   - path: '**\*.nupkg'
+skip_commits:
+  files:
+    - '**/*.md'
