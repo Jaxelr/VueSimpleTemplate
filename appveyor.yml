@@ -12,8 +12,7 @@ before_build:
 build_script:
 - cmd: dotnet publish --configuration Release --verbosity quiet
 artifacts:
-  - path: bin
-  - name: bin
+  - path: 'bin'
 skip_commits:
   files:
     - '**/*.md'
