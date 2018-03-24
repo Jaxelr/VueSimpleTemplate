@@ -12,7 +12,14 @@ before_build:
 build_script:
 - cmd: dotnet publish --configuration Release --verbosity quiet
 artifacts:
-  - path: '**\*.nupkg'
+  - path: bin
+  - name: bin
 skip_commits:
   files:
     - '**/*.md'
+deploy:
+- provider: NuGet
+  server: https://www.myget.org/F/vue-simple-template/api/v2/package
+  api_key:
+    secure: 6xhHSsDvB9arsrSDLuynnbxaVS+BwaoJU96RfQenc5FOnUYvP8SHM6kbvrmpvja2
+  skip_symbols: true
