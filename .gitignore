@@ -287,4 +287,5 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 .vscode/
-Content/wwwroot/
+wwwroot/
+package-lock.json
