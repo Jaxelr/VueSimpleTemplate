@@ -76,8 +76,14 @@ Using the SpaServices from AspNet Core it will execute the webpack configuration
 
 ---
 
-For the full fledge Vue Spa Service template, check [here](https://github.com/aspnet/templating/tree/dev/src/Microsoft.AspNetCore.SpaTemplates/content/Vue-CSharp)   
-_Note on the ms template:_ the template has been announced as retired by the ms team:  https://github.com/aspnet/Announcements/issues/289 
+For the full fledge Vue Spa Service template, check ~~[here](https://github.com/aspnet/templating/tree/dev/src/Microsoft.AspNetCore.SpaTemplates/content/Vue-CSharp)~~
+__*Note on the ms template:*__ the template has been announced as retired by the ms team:  https://github.com/aspnet/Announcements/issues/289 
+
+## Uninstalling
+
+The syntax for uninstalling is the following:
+
+`dotnet new -u "Vue.Simple.Template"`
 
 ## Contributing
 
