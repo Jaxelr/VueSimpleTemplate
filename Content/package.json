@@ -7,14 +7,14 @@
   "private": true,
   "dependencies": {
     "aspnet-prerendering": "^1.0.4",
-    "axios": "^0.17.1",
-    "vue": "^2.5.13",
+    "axios": "^0.18.0",
+    "vue": "^2.5.16",
     "vue-router": "^3.0.1",
-    "vue-server-renderer": "^2.5.13",
+    "vue-server-renderer": "^2.5.16",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "aspnet-webpack": "^2.0.1",
+    "aspnet-webpack": "^2.0.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
@@ -24,7 +24,7 @@
     "vue-loader": "^13.0.4",
     "file-loader": "^0.11.2",
     "url-loader": "^0.5.9",
-    "vue-template-compiler": "^2.5.13",
+    "vue-template-compiler": "^2.5.16",
     "webpack": "^3.5.5",
     "webpack-hot-middleware": "^2.18.2",
     "webpack-merge": "^4.1.0"
