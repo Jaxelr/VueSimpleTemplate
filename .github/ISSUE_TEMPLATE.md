@@ -1,3 +1,9 @@
+## Type
+```
+[ ] Bug report.
+[ ] Feature request.
+```
+
 ## Expected Behavior
 
 
@@ -15,3 +21,5 @@
   - Version:
   - Platform:
   - Subsystem:
+
+## Other Comments
