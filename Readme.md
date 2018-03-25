@@ -12,7 +12,8 @@ This template was created to use vue.js with asp.net core using the library [Jav
 
 NuGet (Stable) | MyGet (Prerelease)
 :---: | :---:
-[![NuGet Badge](https://buildstats.info/nuget/MiniScaffold?includePreReleases=true)](https://www.nuget.org/packages/MiniScaffold/) | 
+[![NuGet](https://img.shields.io/nuget/v/Vue.Simple.Template.svg)](https://www.nuget.org/packages/Vue.Simple.Template/) | [![MyGet](https://img.shields.io/myget/vue-simple-template/v/Vue.Simple.Template.svg)](https://www.myget.org/feed/vue-simple-template/package/nuget/Vue.Simple.Template) |
+
 
 ## Installation
 
