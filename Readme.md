@@ -31,6 +31,42 @@ Once installed as a template you can properly create your own custom projects fr
 
 `dotnet new simplevue -o MyAppName` 
 
+It will generate the following folder structure:
+
+```
+$ tree
+.
+├── .babelrc
+├── appsettings.Development.json
+├── appsettings.json
+├── package.json
+├── Program.cs
+├── Startup.cs
+├── webpack.config.js
+├── Vue.Simple.Template.csproj
+├── /ClientApp
+│   ├── app.js
+│   ├── /assets
+│   │    ├── favicon.co
+│   │    └── logo.png
+│   ├── /build
+│   │    ├── client.js
+│   │    ├── server.js
+│   │    └── serverRender.js
+│   ├── /components
+│   │    └── App.vue
+│   ├── /router
+│   │    └── index.js
+│   └── /store
+│        └── store.js
+├── /Controllers
+│   └── MainController.cs
+└── /Views
+    ├── _ViewImports.cshtml
+    └── /Main
+         └── Index.cshtml
+```
+
 Then proceed to:
 
 `cd MyAppName`
