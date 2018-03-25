@@ -10,9 +10,11 @@ before_build:
   - cmd: dotnet --version
   - cmd: dotnet restore --verbosity quiet
 build_script:
-- cmd: dotnet publish --configuration Release --verbosity quiet
+- cmd: dotnet publish --verbosity quiet
+after_build:
+- cmd: nuget pack 
 artifacts:
-  - path: 'bin'
+  - path: '**/*.nupkg'
 skip_commits:
   files:
     - '**/*.md'
