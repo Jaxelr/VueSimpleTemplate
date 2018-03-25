@@ -1,14 +1,24 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/infk8356yyag6im4?svg=true)](https://ci.appveyor.com/project/Jaxelr/vuetemplate) [![NuGet](https://img.shields.io/nuget/v/Vue.Simple.Template.svg)](https://www.nuget.org/packages/Vue.Simple.Template/)
-
 # Vue Simple Template
 
 This template was created to use vue.js with asp.net core using the library [Javascript Script Services](https://github.com/aspnet/JavaScriptServices). It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template. 
+
+## Builds
+
+| Appveyor  |
+| :---:     |
+| [![Build status](https://ci.appveyor.com/api/projects/status/infk8356yyag6im4?svg=true)](https://ci.appveyor.com/project/Jaxelr/vuetemplate) [![NuGet](https://img.shields.io/nuget/v/Vue.Simple.Template.svg)](https://www.nuget.org/packages/Vue.Simple.Template/) | [![MyGet](https://img.shields.io/myget/vue-simple-template/v/Vue.Simple.Template.svg)](https://www.myget.org/feed/vue-simple-template/package/nuget/Vue.Simple.Template) |
+
+## Packages
+
+NuGet (Stable) | MyGet (Prerelease)
+:---: | :---:
+[![NuGet Badge](https://buildstats.info/nuget/MiniScaffold?includePreReleases=true)](https://www.nuget.org/packages/MiniScaffold/) | 
 
 ## Installation
 
 To install the template, simply use nuget:
 
-`dotnet new -i Vue.Simple.Template::*`
+`dotnet new -i "Vue.Simple.Template::*"`
 
 where * is the equivalent of the latest version of the template. 
 
