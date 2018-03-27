@@ -69,8 +69,11 @@ $ tree
 
 Then proceed to:
 
-`cd MyAppName`
-`npm install`
+``` bash
+cd MyAppName
+npm install
+```
+
 
 Using the SpaServices from AspNet Core it will execute the webpack configurations once you build the site.
 
