@@ -1,18 +1,17 @@
-version: '1.0.{build}'
+version: '0.1.5.{build}'
 image: Visual Studio 2017
 branches:
   only:
   - master
-max_jobs: 1
+  - develop
 init:
   - cmd: git config --global core.autocrlf true
 before_build:
   - cmd: dotnet --version
-  - cmd: dotnet restore --verbosity quiet
 build_script:
-- cmd: dotnet publish --verbosity quiet
+  - cmd: dotnet publish --v quiet
 after_build:
-- cmd: nuget pack -verbosity quiet
+  - cmd: nuget pack -v quiet
 artifacts:
   - path: '**/*.nupkg'
 skip_commits:
@@ -21,6 +20,8 @@ skip_commits:
 deploy:
 - provider: NuGet
   server: https://www.myget.org/F/vue-simple-template/api/v2/package
+  on:
+    branch: master  
   api_key:
     secure: 6xhHSsDvB9arsrSDLuynnbxaVS+BwaoJU96RfQenc5FOnUYvP8SHM6kbvrmpvja2
   skip_symbols: true
