@@ -11,7 +11,7 @@ before_build:
 build_script:
   - cmd: dotnet publish -v quiet
 after_build:
-  - cmd: nuget pack -v quiet
+  - cmd: nuget pack -verbosity quiet
 artifacts:
   - path: '**/*.nupkg'
 skip_commits:
