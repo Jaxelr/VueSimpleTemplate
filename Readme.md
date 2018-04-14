@@ -1,4 +1,4 @@
-# Vue Simple Template
+# Vue Simple Template [![Mit License][mit-img]][mit]
 
 This template was created to use vue.js with asp.net core using the library [Javascript Script Services](https://github.com/aspnet/JavaScriptServices). It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template. 
 
@@ -90,4 +90,7 @@ The syntax for uninstalling is the following:
 
 ## Contributing
 
-Check the [contribution guide](https://github.com/Jaxelr/VueTemplate/blob/master/.github/CONTRIBUTING.md).
+Check the [contribution guide](https://github.com/Jaxelr/VueSimpleTemplate/blob/master/.github/CONTRIBUTING.md).
+
+[mit-img]: http://img.shields.io/badge/License-MIT-blue.svg
+[mit]: https://github.com/Jaxelr/VueSimpleTemplate/blob/master/LICENSE
