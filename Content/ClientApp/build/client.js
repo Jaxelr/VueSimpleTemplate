@@ -1,4 +1,5 @@
-﻿import { app, router, store } from '../app';
+﻿import { app, router, store } from '../app'
+import '../css/site.css'
 
 router.onReady(() => {
     router.beforeResolve((to, from, next) => {

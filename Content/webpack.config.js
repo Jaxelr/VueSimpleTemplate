@@ -7,6 +7,9 @@ function resolve(dir) {
 }
 
 module.exports = (env) => {
+
+    const isDevBuild = !(env && env.prod);
+
     const config = () => ({
         output: {
             publicPath: '/dist/',
@@ -23,9 +26,9 @@ module.exports = (env) => {
                     loader: 'babel-loader',
                     exclude: /node_modules/
                 },
-                {
-                    test: /\.css$/,
-                    loader: "style-loader!css-loader"
+                { 
+                    test: /\.css$/, 
+                    loader : "style-loader!css-loader"
                 },
                 {
                     test: /\.(jpe?g|png|gif|svg)$/i,

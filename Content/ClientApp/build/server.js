@@ -1,4 +1,4 @@
-﻿import { app, router, store } from '../app';
+﻿import { app, router, store } from '../app'
 
 export default context => {
   return new Promise((resolve, reject) => {

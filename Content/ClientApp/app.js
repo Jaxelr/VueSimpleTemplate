@@ -1,10 +1,13 @@
 import Vue from 'vue'
+import axios from 'axios'
 import App from '@/components/App.vue'
-import router from './router';
-import store from './store/store.js';
+import router from './router'
+import store from './store/store.js'
 
 //Adds the icon file to the graph.
-var icoFile = require("./assets/favicon.ico");
+import icoFile from "./assets/favicon.ico"
+
+Vue.prototype.$http = axios;
 
 const app = new Vue({
     router,
@@ -12,4 +15,8 @@ const app = new Vue({
     ...App
 })
 
-export { app, router, store };
+export { 
+    app, 
+    router, 
+    store 
+}
