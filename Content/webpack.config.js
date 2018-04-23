@@ -1,14 +1,17 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
+const clientOutputDir = './wwwroot/dist';
 
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
 
-module.exports = (env) => {
+const isDevBuild = !(process.env.NODE_ENV && process.env.NODE_ENV === 'production')
 
-    const isDevBuild = !(env && env.prod);
+module.exports = (env) => {
 
     const config = () => ({
         output: {
@@ -28,7 +31,8 @@ module.exports = (env) => {
                 },
                 { 
                     test: /\.css$/, 
-                    loader : "style-loader!css-loader"
+                    use: isDevBuild ? ['style-loader', 'css-loader'] 
+                    : ExtractTextPlugin.extract({ use: 'css-loader' }) 
                 },
                 {
                     test: /\.(jpe?g|png|gif|svg)$/i,
@@ -53,10 +57,23 @@ module.exports = (env) => {
               '@': resolve('ClientApp')
             }
         },
-        devtool: '#eval-source-map'
+        devtool: '#eval-source-map',
+        plugins: (isDevBuild ? [
+            new webpack.SourceMapDevToolPlugin({
+              filename: '[file].map', 
+              moduleFilenameTemplate: path.relative(clientOutputDir, '[resourcePath]')
+            })
+          ] : [
+            new webpack.optimize.UglifyJsPlugin(),
+            extractCSS,
+            new OptimizeCSSPlugin({
+              cssProcessorOptions: {
+                safe: true
+              }
+            })
+      ])
     });
 
-    const clientOutputDir = './wwwroot/dist';
     const clientConfig = merge(config(), {
         entry: { 'main-client': './ClientApp/build/client.js' },
         output: {
@@ -69,7 +86,7 @@ module.exports = (env) => {
         entry: { 'main-server': './ClientApp/build/server.js' },
         output: {
             libraryTarget: 'commonjs2',
-            path: resolve('wwwroot/dist')
+            path: resolve(clientOutputDir)
         },
         module: {
             rules: [
@@ -82,24 +99,4 @@ module.exports = (env) => {
     });
 
     return [clientConfig, serverConfig];
-}
-
-if (process.env.NODE_ENV === 'production') {
-    module.exports.devtool = '#source-map'
-    module.exports.plugins = (module.exports.plugins || []).concat([
-      new webpack.DefinePlugin({
-        'process.env': {
-          NODE_ENV: '"production"'
-        }
-      }),
-      new webpack.optimize.UglifyJsPlugin({
-        sourceMap: true,
-        compress: {
-          warnings: false
-        }
-      }),
-      new webpack.LoaderOptionsPlugin({
-        minimize: true
-      })
-    ])
 }

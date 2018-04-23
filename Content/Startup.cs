@@ -42,6 +42,10 @@ namespace VueTemplate
                     HotModuleReplacement = true
                 });
             }
+            else 
+            {
+                 app.UseExceptionHandler("/Main/Error");
+            }
 
             app.UseStaticFiles();
 
