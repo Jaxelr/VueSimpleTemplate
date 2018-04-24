@@ -6,14 +6,13 @@ This template was created to use vue.js with asp.net core using the library [Jav
 
 | Appveyor  |
 | :---:     |
-| [![Build status](https://ci.appveyor.com/api/projects/status/vvnkjjckfv6v1dgk?svg=true)](https://ci.appveyor.com/project/Jaxelr/vuetemplate) |
+| [![Build status][build-img]][build] |
 
 ## Packages
 
-NuGet (Stable) | MyGet (Prerelease)
-:---: | :---:
-[![NuGet](https://img.shields.io/nuget/v/Vue.Simple.Template.svg)](https://www.nuget.org/packages/Vue.Simple.Template/) | [![MyGet](https://img.shields.io/myget/vue-simple-template/v/Vue.Simple.Template.svg)](https://www.myget.org/feed/vue-simple-template/package/nuget/Vue.Simple.Template) |
-
+| NuGet (Stable) | MyGet (Prerelease) |
+| :---: | :---: |
+| [![NuGet][nuget-img]][nuget] | [![MyGet][myget-img]][myget] |
 
 ## Installation
 
@@ -33,7 +32,7 @@ Once installed as a template you can properly create your own custom projects fr
 
 It will generate the following folder structure:
 
-```
+``` 
 $ tree
 .
 ├── .babelrc
@@ -55,6 +54,8 @@ $ tree
 │   │    └── serverRender.js
 │   ├── /components
 │   │    └── App.vue
+│   ├── /css
+│   │    └── site.css
 │   ├── /router
 │   │    └── index.js
 │   └── /store
@@ -73,7 +74,6 @@ Then proceed to:
 cd MyAppName
 npm install
 ```
-
 
 Using the SpaServices from AspNet Core it will execute the webpack configurations once you build the site.
 
@@ -94,3 +94,9 @@ Check the [contribution guide](https://github.com/Jaxelr/VueSimpleTemplate/blob/
 
 [mit-img]: http://img.shields.io/badge/License-MIT-blue.svg
 [mit]: https://github.com/Jaxelr/VueSimpleTemplate/blob/master/LICENSE
+[build-img]: https://ci.appveyor.com/api/projects/status/vvnkjjckfv6v1dgk?svg=true
+[build]: https://ci.appveyor.com/project/Jaxelr/vuetemplate
+[nuget-img]: https://img.shields.io/nuget/v/Vue.Simple.Template.svg
+[nuget]: https://www.nuget.org/packages/Vue.Simple.Template/
+[myget-img]: https://img.shields.io/myget/vue-simple-template/v/Vue.Simple.Template.svg
+[myget]: https://www.myget.org/feed/vue-simple-template/package/nuget/Vue.Simple.Template
