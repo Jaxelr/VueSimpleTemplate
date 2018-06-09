@@ -1,4 +1,4 @@
-<template>
+<template v-if="loading === true">
   <div id="app">
     <img src="../assets/logo.png">
     <h1>{{ msg }}</h1>
@@ -24,8 +24,12 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      loading: false
     }
+  },
+  ready: function () {
+      this.loading = true;
   }
 }
 </script>

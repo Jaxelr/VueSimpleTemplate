@@ -4,6 +4,10 @@
   "author": {
     "name": "Jaxel Rojas"
   },
+  "scripts": {
+    "dev": "cross-env ASPNETCORE_ENVIRONMENT=Development NODE_ENV=development dotnet run",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
   "private": true,
   "dependencies": {
     "aspnet-prerendering": "^1.0.4",
@@ -19,17 +23,18 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^5.1.6",
     "css-loader": "^0.28.5",
-    "style-loader": "0.21.0",
-    "json-loader": "^0.5.7",
-    "vue-loader": "^13.0.4",
+    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^0.11.2",
+    "json-loader": "^0.5.7",
+    "optimize-css-assets-webpack-plugin": "^4.0.0",
+    "style-loader": "0.21.0",
     "url-loader": "^0.5.9",
+    "vue-loader": "^13.0.4",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^3.5.5",
     "webpack-hot-middleware": "^2.18.2",
-    "webpack-merge": "^4.1.0",
-    "optimize-css-assets-webpack-plugin": "^4.0.0",
-    "extract-text-webpack-plugin": "^3.0.2"
+    "webpack-merge": "^4.1.0"
   }
 }
