@@ -11,5 +11,6 @@
     "tags": {
         "language": "C#"
     },
-    "sourceName": "Vuejs"
+    "sourceName": "Vue.Simple.Template",
+    "preferNameDirectory": true
 }
