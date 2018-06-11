@@ -28,7 +28,7 @@ If you would like to tinker with the code locally, you can clone the repository 
 
 Once installed as a template you can properly create your own custom projects from the template using the following command:
 
-`dotnet new simplevue -o MyAppName` 
+`dotnet new simplevue -o MyAppName`
 
 It will generate the following folder structure:
 
@@ -42,7 +42,7 @@ $ tree
 ├── Program.cs
 ├── Startup.cs
 ├── webpack.config.js
-├── Vue.Simple.Template.csproj
+├── {ProjectName}.csproj
 ├── /ClientApp
 │   ├── app.js
 │   ├── /assets
