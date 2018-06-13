@@ -6,11 +6,13 @@
   },
   "scripts": {
     "dev": "cross-env ASPNETCORE_ENVIRONMENT=Development NODE_ENV=development dotnet run",
-    "build": "cross-env NODE_ENV=production webpack"
+    "dev:vendor": "cross-env NODE_ENV=development webpack --config webpack.config.vendor.js --progress",
+    "build": "npm run build:vendor && cross-env NODE_ENV=production webpack",
+    "build:vendor": "cross-env NODE_ENV=production webpack --config webpack.config.vendor.js --progress",
+    "install": "npm run dev:vendor"
   },
   "private": true,
   "dependencies": {
-    "aspnet-prerendering": "^1.0.4",
     "axios": "^0.18.0",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",

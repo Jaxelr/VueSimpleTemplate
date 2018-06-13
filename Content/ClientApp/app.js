@@ -6,7 +6,7 @@ import store from './store/store.js'
 
 Vue.prototype.$http = axios;
 
-Vue.config.productionTip = true;
+Vue.config.productionTip = false;
 
 const app = new Vue({
     router,

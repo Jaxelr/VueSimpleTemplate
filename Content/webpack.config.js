@@ -58,7 +58,12 @@ module.exports = (env) => {
             }
         },
         devtool: '#eval-source-map',
-        plugins: (isDevBuild ? [
+        plugins: [
+            new webpack.DllReferencePlugin({
+              context: __dirname,
+              manifest: require('./wwwroot/dist/vendor-manifest.json')
+            })
+          ].concat(isDevBuild ? [
             new webpack.SourceMapDevToolPlugin({
               filename: '[file].map', 
               moduleFilenameTemplate: path.relative(clientOutputDir, '[resourcePath]')
@@ -75,28 +80,11 @@ module.exports = (env) => {
     });
 
     const clientConfig = merge(config(), {
-        entry: { 'main-client': './ClientApp/build/client.js' },
+        entry: { 'client': './ClientApp/build/build.js' },
         output: {
             path: resolve(clientOutputDir)
         }
     });
 
-    const serverConfig = merge(config(), {
-        target: 'node',
-        entry: { 'main-server': './ClientApp/build/server.js' },
-        output: {
-            libraryTarget: 'commonjs2',
-            path: resolve(clientOutputDir)
-        },
-        module: {
-            rules: [
-                {
-                    test: /\.json?$/,
-                    loader: 'json-loader'
-                }
-            ]
-        },
-    });
-
-    return [clientConfig, serverConfig];
+    return clientConfig;
 }
