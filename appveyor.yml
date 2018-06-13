@@ -9,7 +9,7 @@ init:
 before_build:
   - cmd: dotnet --version
 build_script:
-  - cmd: dotnet publish -v quiet
+  - cmd: dotnet publish ./Content/Vue.Simple.Template.sln -v quiet
 after_build:
   - cmd: nuget pack -verbosity quiet
 artifacts:
