@@ -1,6 +1,6 @@
 # Vue Simple Template [![Mit License][mit-img]][mit]
 
-This template was created to use vue.js with asp.net core using the library [Javascript Script Services](https://github.com/aspnet/JavaScriptServices). It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template. 
+This template was created to use vue.js with asp.net core using the library [Javascript Script Services](https://github.com/aspnet/JavaScriptServices). It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template.
 
 ## Builds
 
@@ -42,16 +42,14 @@ $ tree
 ├── Program.cs
 ├── Startup.cs
 ├── webpack.config.js
+├── webpack.config.vendor.js
 ├── {ProjectName}.csproj
 ├── /ClientApp
 │   ├── app.js
 │   ├── /assets
-│   │    ├── favicon.co
 │   │    └── logo.png
 │   ├── /build
-│   │    ├── client.js
-│   │    ├── server.js
-│   │    └── serverRender.js
+│   │    └── build.js
 │   ├── /components
 │   │    └── App.vue
 │   ├── /css
@@ -63,6 +61,7 @@ $ tree
 ├── /Controllers
 │   └── MainController.cs
 └── /Views
+    ├── _ViewStart.cshtml
     ├── _ViewImports.cshtml
     └── /Main
          └── Index.cshtml
@@ -87,6 +86,10 @@ __*Note on the ms template:*__ the template has been announced as retired by the
 The syntax for uninstalling is the following:
 
 `dotnet new -u "Vue.Simple.Template"`
+
+### Further info
+
+For More information on how to manage dotnet custom templates see the [docs.microsoft documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates).
 
 ## Contributing
 
