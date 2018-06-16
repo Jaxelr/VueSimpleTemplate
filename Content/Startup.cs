@@ -44,9 +44,12 @@ namespace VueTemplate
             else
             {
                 app.UseExceptionHandler("/Main/Error");
+                app.UseHsts();
             }
 
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseCookiePolicy();
 
             app.UseMvc(routes =>
             {
