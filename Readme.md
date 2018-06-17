@@ -20,7 +20,7 @@ To install the template, simply use nuget:
 
 `dotnet new -i "Vue.Simple.Template::*"`
 
-where * is the equivalent of the latest version of the template. 
+where * is the equivalent of the latest version of the template.
 
 If you would like to tinker with the code locally, you can clone the repository and execute the following command with the dotnet command, using the path of the repo:
 
@@ -32,8 +32,7 @@ Once installed as a template you can properly create your own custom projects fr
 
 It will generate the following folder structure:
 
-``` 
-$ tree
+``` tree
 .
 ├── .babelrc
 ├── appsettings.Development.json
@@ -79,7 +78,7 @@ Using the SpaServices from AspNet Core it will execute the webpack configuration
 ---
 
 For the full fledge Vue Spa Service template, check ~~[here](https://github.com/aspnet/templating/tree/dev/src/Microsoft.AspNetCore.SpaTemplates/content/Vue-CSharp)~~
-__*Note on the ms template:*__ the template has been announced as retired by the ms team:  https://github.com/aspnet/Announcements/issues/289 
+__*Note on the ms template:*__ the template has been announced as retired by the [ms team](https://github.com/aspnet/Announcements/issues/289)
 
 ## Uninstalling
 
