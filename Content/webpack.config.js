@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const clientOutputDir = './wwwroot/dist';
 
 function resolve(dir) {
@@ -11,7 +12,7 @@ function resolve(dir) {
 
 const isDevBuild = !(process.env.NODE_ENV && process.env.NODE_ENV === 'production')
 
-module.exports = (env) => {
+module.exports = (env, options) => {
 
     const config = () => ({
         output: {
@@ -59,6 +60,7 @@ module.exports = (env) => {
         },
         devtool: '#eval-source-map',
         plugins: [
+            new VueLoaderPlugin(),
             new webpack.DllReferencePlugin({
               context: __dirname,
               manifest: require('./wwwroot/dist/vendor-manifest.json')
