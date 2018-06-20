@@ -8,6 +8,7 @@ init:
   - cmd: git config --global core.autocrlf true
 before_build:
   - cmd: dotnet --version
+  - choco install nodejs
 build_script:
   - cmd: dotnet publish ./Content/Vue.Simple.Template.sln -v quiet
 after_build:
