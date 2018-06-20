@@ -17,6 +17,7 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <Target Name="RestoreVendor" AfterTargets="Compile">
+    <Exec Command="npm install" />
     <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.dev" />
   </Target>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
