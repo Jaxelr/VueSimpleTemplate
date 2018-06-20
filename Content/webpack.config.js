@@ -9,9 +9,9 @@ function resolve(dir) {
     return path.join(__dirname, dir)
 }
 
-const isDevBuild = !(process.env.NODE_ENV && process.env.NODE_ENV === 'production')
-
 module.exports = (env) => {
+
+    const isDevBuild = !(env && env.prod);
 
     const config = () => ({
         output: {
@@ -58,25 +58,20 @@ module.exports = (env) => {
             }
         },
         devtool: '#eval-source-map',
-        plugins: [
-            new webpack.DllReferencePlugin({
-              context: __dirname,
-              manifest: require('./wwwroot/dist/vendor-manifest.json')
-            })
-          ].concat(isDevBuild ? [
+        plugins: [].concat(isDevBuild ? [
             new webpack.SourceMapDevToolPlugin({
               filename: '[file].map', 
               moduleFilenameTemplate: path.relative(clientOutputDir, '[resourcePath]')
             })
           ] : [
+            new ExtractTextPlugin("site.css"),
             new webpack.optimize.UglifyJsPlugin(),
-            extractCSS,
             new OptimizeCSSPlugin({
               cssProcessorOptions: {
                 safe: true
               }
             })
-      ])
+          ])
     });
 
     const clientConfig = merge(config(), {

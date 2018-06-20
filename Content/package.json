@@ -6,22 +6,22 @@
   },
   "scripts": {
     "dev": "cross-env ASPNETCORE_ENVIRONMENT=Development NODE_ENV=development dotnet run",
-    "dev:vendor": "cross-env NODE_ENV=development webpack --config webpack.config.vendor.js --progress",
-    "build": "npm run build:vendor && cross-env NODE_ENV=production webpack",
-    "build:vendor": "cross-env NODE_ENV=production webpack --config webpack.config.vendor.js --progress",
-    "install": "npm run dev:vendor"
+    "dev:vendor": "webpack --config webpack.config.vendor.js --progress --env.dev",
+    "build": "npm run build:vendor && webpack --config webpack.config.js --progress --env.prod",
+    "build:vendor": "webpack --config webpack.config.vendor.js --progress --env.prod"
   },
   "private": true,
   "dependencies": {
+    "aspnet-prerendering": "^3.0.1",
     "axios": "^0.18.0",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
     "vue-server-renderer": "^2.5.16",
+    "vue-template-compiler": "^2.5.16",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
     "aspnet-webpack": "^2.0.3",
-    "aspnet-prerendering": "^3.0.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
@@ -31,11 +31,10 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^0.11.2",
     "json-loader": "^0.5.7",
-    "optimize-css-assets-webpack-plugin": "^4.0.0",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
     "style-loader": "0.21.0",
     "url-loader": "^0.5.9",
     "vue-loader": "^13.0.4",
-    "vue-template-compiler": "^2.5.16",
     "webpack": "^3.5.5",
     "webpack-hot-middleware": "^2.18.2",
     "webpack-merge": "^4.1.0"
