@@ -20,7 +20,7 @@ To install the template, simply use nuget:
 
 `dotnet new -i "Vue.Simple.Template::*"`
 
-where * is the equivalent of the latest version of the template. 
+where * is the equivalent of the latest version of the template.
 
 If you would like to tinker with the code locally, you can clone the repository and execute the following command with the dotnet command, using the path of the repo:
 
@@ -32,8 +32,8 @@ Once installed as a template you can properly create your own custom projects fr
 
 It will generate the following folder structure:
 
-``` 
-$ tree
+``` tree
+$
 .
 ├── .babelrc
 ├── appsettings.Development.json
@@ -49,7 +49,9 @@ $ tree
 │   ├── /assets
 │   │    └── logo.png
 │   ├── /build
-│   │    └── build.js
+│   │    ├── client.js
+│   │    ├── server.js
+│   │    └── serverRender.js
 │   ├── /components
 │   │    └── App.vue
 │   ├── /css
