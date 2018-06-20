@@ -2,17 +2,16 @@ const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const clientOutputDir = './wwwroot/dist';
+const clientOutputDir = './wwwroot/dist'
 
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
 
-const isDevBuild = !(process.env.NODE_ENV && process.env.NODE_ENV === 'production')
-const extractCSS = new ExtractTextPlugin('vendor.css')
+module.exports = (env) => {
 
-module.exports = () => {
- 
+  const isDevBuild = !(env && env.prod);
+    
   return [{
     stats: { modules: false },
     resolve: {
@@ -21,7 +20,7 @@ module.exports = () => {
     module: {
       rules: [
         { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, use: 'url-loader?limit=100000' },
-        { test: /\.css(\?|$)/, use: extractCSS.extract(['css-loader']) }
+        { test: /\.css(\?|$)/, use: ExtractTextPlugin.extract(['css-loader']) }
       ]
     },
     entry: {
@@ -43,7 +42,7 @@ module.exports = () => {
       })
     ].concat(isDevBuild ? [] : [
         new webpack.optimize.UglifyJsPlugin(),
-        extractCSS,
+        new ExtractTextPlugin('vendor.css'),
         new OptimizeCSSPlugin({
           cssProcessorOptions: {
             safe: true

@@ -33,6 +33,7 @@ Once installed as a template you can properly create your own custom projects fr
 It will generate the following folder structure:
 
 ``` tree
+$
 .
 ├── .babelrc
 ├── appsettings.Development.json
@@ -48,7 +49,9 @@ It will generate the following folder structure:
 │   ├── /assets
 │   │    └── logo.png
 │   ├── /build
-│   │    └── build.js
+│   │    ├── client.js
+│   │    ├── server.js
+│   │    └── serverRender.js
 │   ├── /components
 │   │    └── App.vue
 │   ├── /css

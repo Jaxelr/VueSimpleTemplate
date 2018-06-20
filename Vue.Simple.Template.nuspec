@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Vue.Simple.Template</id>
-    <version>0.1.7</version>
+    <version>0.1.8</version>
     <title>Vue dotnet new templates</title>
     <description>A barebone template for Vue Js using Asp.Net Core 2.0.0 and Webpack 3.0 that contains Server Side Rendering and Hot Module Reloading</description>
     <authors>Jaxel Rojas</authors>
@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/Jaxelr/VueTemplate</projectUrl>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Update to target netcore 2.1. </releaseNotes>
+    <releaseNotes>Update to target netcore 2.1 and restored SSR on Webpack 3.0.</releaseNotes>
     <copyright>2017</copyright>
     <tags>template;vue;vuejs</tags>
     <language>en-US</language>
