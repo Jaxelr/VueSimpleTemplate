@@ -80,11 +80,20 @@ module.exports = (env) => {
     });
 
     const clientConfig = merge(config(), {
-        entry: { 'client': './ClientApp/build/build.js' },
+        entry: { 'client': './ClientApp/build/client.js' },
         output: {
             path: resolve(clientOutputDir)
         }
     });
 
-    return clientConfig;
+    const serverConfig = merge(config(), {
+        target: 'node',
+        entry: { 'server': './ClientApp/build/server.js' },
+        output: {
+            libraryTarget: 'commonjs2',
+            path: resolve(clientOutputDir)
+        }
+});
+
+    return [clientConfig, serverConfig];
 }

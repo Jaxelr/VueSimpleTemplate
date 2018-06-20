@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "aspnet-webpack": "^2.0.3",
+    "aspnet-prerendering": "^3.0.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
