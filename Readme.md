@@ -24,9 +24,9 @@ where * is the equivalent of the latest version of the template.
 
 If you would like to tinker with the code locally, you can clone the repository and execute the following command with the dotnet command, using the path of the repo:
 
-`dotnet new -i $PATH_OF_REPO`
+`dotnet new -i "$PATH_OF_NUSPEC_FILE"`
 
-Once installed as a template you can properly create your own custom projects from the template using the following command:
+Once installed as a template you can properly create your own custom projects using the template using the following command:
 
 `dotnet new simplevue -o MyAppName`
 
@@ -76,7 +76,7 @@ cd MyAppName
 npm install
 ```
 
-Using the SpaServices from AspNet Core it will execute the webpack configurations once you build the site.
+Using the SpaServices from AspNet Core it will execute the webpack configurations once you build the site, or alternatively you can execute npm run dev from the command line. Verify the commands defined on the package.json for details.
 
 ---
 
@@ -88,6 +88,10 @@ __*Note on the ms template:*__ the template has been announced as retired by the
 The syntax for uninstalling is the following:
 
 `dotnet new -u "Vue.Simple.Template"`
+
+Or 
+
+`dotnet new -u "$PATH_OF_NUSPEC_FILE"`
 
 ### Further info
 
