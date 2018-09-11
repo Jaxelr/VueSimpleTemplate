@@ -18,12 +18,12 @@
   </ItemGroup>
   <Target Name="RestoreVendor" AfterTargets="Compile">
     <Exec Command="npm install" />
-    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.dev" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --mode development" />
   </Target>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
   <Exec Command="npm install" />
-  <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.prod" />
-  <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.js --env.prod" />
+  <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --mode production" />
+  <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.js --mode production" />
   <ItemGroup>
     <DistFiles Include="wwwroot\dist\**; ClientApp\dist\**" />
     <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
