@@ -21,8 +21,6 @@
   </Target>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
   <Exec Command="npm install" />
-  <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --mode production" />
-  <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.js --mode production" />
   <ItemGroup>
     <DistFiles Include="wwwroot\dist\**; ClientApp\dist\**" />
     <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
