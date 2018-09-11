@@ -1,4 +1,4 @@
-version: '0.1.7.{build}'
+version: '0.1.8.{build}'
 image: Visual Studio 2017
 branches:
   only:
@@ -8,6 +8,7 @@ init:
   - cmd: git config --global core.autocrlf true
 before_build:
   - cmd: dotnet --version
+  - choco install nodejs
 build_script:
   - cmd: dotnet publish ./Content/Vue.Simple.Template.sln -v quiet
 after_build:
@@ -22,6 +23,7 @@ deploy:
   server: https://www.myget.org/F/vue-simple-template/api/v2/package
   on:
     branch: master  
+    appveyor_repo_tag: true
   api_key:
     secure: 6xhHSsDvB9arsrSDLuynnbxaVS+BwaoJU96RfQenc5FOnUYvP8SHM6kbvrmpvja2
   skip_symbols: true

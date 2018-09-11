@@ -1,18 +1,18 @@
-const path = require('path');
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const clientOutputDir = './wwwroot/dist';
+const path = require('path')
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const MiniCssExtractTextPlugin = require('mini-css-extract-plugin')
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const clientOutputDir = './wwwroot/dist'
 
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
 
-const isDevBuild = !(process.env.NODE_ENV && process.env.NODE_ENV === 'production')
+module.exports = (env) => {
 
-module.exports = (env, options) => {
+    const isDevBuild = !(env && env.prod);
 
     const config = () => ({
         output: {
@@ -32,8 +32,7 @@ module.exports = (env, options) => {
                 },
                 { 
                     test: /\.css$/, 
-                    use: isDevBuild ? ['style-loader', 'css-loader'] 
-                    : ExtractTextPlugin.extract({ use: 'css-loader' }) 
+                    use:  [{ loader: MiniCssExtractTextPlugin.loader }, "css-loader" ]
                 },
                 {
                     test: /\.(jpe?g|png|gif|svg)$/i,
@@ -62,8 +61,8 @@ module.exports = (env, options) => {
         plugins: [
             new VueLoaderPlugin(),
             new webpack.DllReferencePlugin({
-              context: __dirname,
-              manifest: require('./wwwroot/dist/vendor-manifest.json')
+                context: clientOutputDir,
+                manifest: require('./wwwroot/dist/vendor-manifest.json')
             })
           ].concat(isDevBuild ? [
             new webpack.SourceMapDevToolPlugin({
@@ -71,22 +70,31 @@ module.exports = (env, options) => {
               moduleFilenameTemplate: path.relative(clientOutputDir, '[resourcePath]')
             })
           ] : [
+            new MiniCssExtractTextPlugin({ filename : "site.css"}),
             new webpack.optimize.UglifyJsPlugin(),
-            extractCSS,
             new OptimizeCSSPlugin({
               cssProcessorOptions: {
                 safe: true
               }
             })
-      ])
+          ])
     });
 
     const clientConfig = merge(config(), {
-        entry: { 'client': './ClientApp/build/build.js' },
+        entry: { 'client': './ClientApp/build/client.js' },
         output: {
             path: resolve(clientOutputDir)
         }
     });
 
-    return clientConfig;
+    const serverConfig = merge(config(), {
+        target: 'node',
+        entry: { 'server': './ClientApp/build/server.js' },
+        output: {
+            libraryTarget: 'commonjs2',
+            path: resolve(clientOutputDir)
+        }
+});
+
+    return [clientConfig, serverConfig];
 }

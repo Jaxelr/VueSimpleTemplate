@@ -1,18 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <PackageId>Vue.Simple.Template</PackageId>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <Version>0.1.5</Version>
-    <Description>A template for Vue Js using Asp.Net Core and Webpack</Description>
-    <Copyright>Copyright 2017</Copyright>
-    <Authors>Jaxel Rojas</Authors>
-    <Company>Jaxel Rojas</Company>
-    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/Jaxelr/VueTemplate</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Jaxelr/VueTemplate</RepositoryUrl>
-    <PackageTags>Vue Template</PackageTags>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,10 +16,14 @@
   <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
+  <Target Name="RestoreVendor" AfterTargets="Compile">
+    <Exec Command="npm install" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.dev" />
+  </Target>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
   <Exec Command="npm install" />
   <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.prod" />
-  <Exec Command="node node_modules/webpack/bin/webpack.js --env.prod" />
+  <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.js --env.prod" />
   <ItemGroup>
     <DistFiles Include="wwwroot\dist\**; ClientApp\dist\**" />
     <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
