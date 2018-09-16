@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const MiniCssExtractTextPlugin = require('mini-css-extract-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const clientOutputDir = './wwwroot/dist'
 
@@ -11,6 +11,7 @@ function resolve(dir) {
 module.exports = (env) => {
 
   const isDevBuild = !(env && env.prod);
+  const extractCSS = new ExtractTextPlugin('vendor.css');
     
   return [{
     stats: { modules: false },
@@ -20,7 +21,7 @@ module.exports = (env) => {
     module: {
       rules: [
         { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, use: 'url-loader?limit=100000' },
-        { test: /\.css(\?|$)/, use:  [{ loader: MiniCssExtractTextPlugin.loader }, "css-loader" ] }
+        { test: /\.css(\?|$)/, use: extractCSS.extract({ use: isDevBuild ? 'css-loader' : 'css-loader?minimize' }) }
       ]
     },
     entry: {
@@ -37,7 +38,7 @@ module.exports = (env) => {
         path: path.join(__dirname, 'wwwroot', 'dist', '[name]-manifest.json'),
         name: '[name]_[hash]'
       }),
-      new MiniCssExtractTextPlugin({ filename : "vendor.css"}),
+      extractCSS,
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': isDevBuild ? '"development"' : '"production"'
       })

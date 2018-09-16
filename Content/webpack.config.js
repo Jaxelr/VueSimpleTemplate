@@ -1,7 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-const MiniCssExtractTextPlugin = require('mini-css-extract-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const clientOutputDir = './wwwroot/dist'
@@ -32,7 +32,7 @@ module.exports = (env) => {
                 },
                 { 
                     test: /\.css$/, 
-                    use:  [{ loader: MiniCssExtractTextPlugin.loader }, "css-loader" ]
+                    use: isDevBuild ? [ 'style-loader', 'css-loader' ] : ExtractTextPlugin.extract({ use: 'css-loader?minimize' })
                 },
                 {
                     test: /\.(jpe?g|png|gif|svg)$/i,
@@ -70,7 +70,7 @@ module.exports = (env) => {
               moduleFilenameTemplate: path.relative(clientOutputDir, '[resourcePath]')
             })
           ] : [
-            new MiniCssExtractTextPlugin({ filename : "site.css"}),
+            new ExtractTextPlugin('site.css'),
             new webpack.optimize.UglifyJsPlugin(),
             new OptimizeCSSPlugin({
               cssProcessorOptions: {
