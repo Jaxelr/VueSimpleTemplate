@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using VueCliMiddleware;
 
 namespace VueTemplate
 {
@@ -48,8 +49,8 @@ namespace VueTemplate
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSpaStaticFiles();
 
             app.UseMvc(routes =>
             {
@@ -58,6 +59,17 @@ namespace VueTemplate
                     template: "{controller=Main}/{action=Index}/{id?}");
 
                 routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Main", action = "Index" });
+            });
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "ClientApp";
+#if DEBUG
+                if (env.IsDevelopment())
+                {
+                    spa.UseVueCli(npmScript: "serve", port: 8080); // optional port
+                }
+#endif
             });
         }
     }
