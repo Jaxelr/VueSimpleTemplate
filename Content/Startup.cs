@@ -46,10 +46,10 @@ namespace VueTemplate
             {
                 app.UseExceptionHandler("/Main/Error");
                 app.UseHsts();
+                app.UseHttpsRedirection();
+                app.UseCookiePolicy();
             }
 
-            app.UseHttpsRedirection();
-            app.UseCookiePolicy();
             app.UseSpaStaticFiles();
 
             app.UseMvc(routes =>
