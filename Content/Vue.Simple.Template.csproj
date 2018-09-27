@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
+    <ClientApp>ClientApp\</ClientApp>
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
@@ -11,23 +12,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+    <Content Remove="$(ClientApp)**" />
+    <None Include="$(ClientApp)**" Exclude="$(ClientApp)node_modules\**" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-  <Target Name="RestoreVendor" AfterTargets="Compile">
-    <Exec Command="npm install" />
-  </Target>
-  <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
-  <Exec Command="npm install" />
-  <ItemGroup>
-    <DistFiles Include="wwwroot\dist\**; ClientApp\dist\**" />
-    <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
-      <RelativePath>%(DistFiles.Identity)</RelativePath>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </ResolvedFileToPublish>
-  </ItemGroup>
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+
+    <Exec WorkingDirectory="$(ClientApp)" Command="npm install" />
+    <Exec WorkingDirectory="$(ClientApp)" Command="npm run build" />
+
+    <ItemGroup>
+      <DistFiles Include="$(ClientApp)dist\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
 </Target>
 </Project>
