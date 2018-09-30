@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using VueCliMiddleware;
 
 namespace VueTemplate
 {
@@ -22,11 +23,13 @@ namespace VueTemplate
         public IConfigurationRoot Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services) =>
+        public void ConfigureServices(IServiceCollection services) 
+        {
             // Add framework services.
-            services.AddMvc()
-            .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
 
+            services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
+        }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
@@ -36,20 +39,17 @@ namespace VueTemplate
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
-                {
-                    HotModuleReplacement = true
-                });
             }
             else
             {
                 app.UseExceptionHandler("/Main/Error");
                 app.UseHsts();
+                app.UseHttpsRedirection();
+                app.UseCookiePolicy();
             }
 
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
+            app.UseSpaStaticFiles();
 
             app.UseMvc(routes =>
             {
@@ -58,6 +58,17 @@ namespace VueTemplate
                     template: "{controller=Main}/{action=Index}/{id?}");
 
                 routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Main", action = "Index" });
+            });
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "ClientApp";
+#if DEBUG
+                if (env.IsDevelopment())
+                {
+                    spa.UseVueCli(npmScript: "serve", port: 8080); // optional port
+                }
+#endif
             });
         }
     }

@@ -2,15 +2,15 @@
 <package>
   <metadata>
     <id>Vue.Simple.Template</id>
-    <version>0.1.8</version>
+    <version>0.2.0</version>
     <title>Vue dotnet new templates</title>
-    <description>A barebone template for Vue Js using Asp.Net Core 2.0.0 and Webpack 3.0 that contains Server Side Rendering and Hot Module Reloading</description>
+    <description>A barebone template for Vue Js using Asp.Net Core 2+</description>
     <authors>Jaxel Rojas</authors>
     <owners>Jaxel Rojas</owners>
     <projectUrl>https://github.com/Jaxelr/VueTemplate</projectUrl>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Update to target netcore 2.1 and restored SSR on Webpack 3.0.</releaseNotes>
+    <releaseNotes>Update to usage of vue-cli 3.0 and webpack 4</releaseNotes>
     <copyright>2017</copyright>
     <tags>template;vue;vuejs</tags>
     <language>en-US</language>
@@ -19,6 +19,6 @@
     </packageTypes>
   </metadata>
   <files>
-    <file src="Content\**" exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\*.lock.json;**\node_modules\**;**\.vscode\**" target="content"/>
+    <file src="Content\**" exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\node_modules\**;**\.vscode\**" target="content"/>
   </files>
 </package>
