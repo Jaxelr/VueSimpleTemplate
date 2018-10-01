@@ -90,9 +90,9 @@ The syntax for uninstalling is the following:
 
 `dotnet new -u "Vue.Simple.Template"`
 
-Or 
+Or
 
-`dotnet new -u "$PATH_OF_NUSPEC_FILE"`
+`dotnet new -u "$PATH_OF_NUPKG_FILE"`
 
 ### Further info
 
