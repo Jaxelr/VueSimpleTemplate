@@ -24,7 +24,7 @@ where * is the equivalent of the latest version of the template.
 
 If you would like to tinker with the code locally, you can clone the repository and execute the following command with the dotnet command, using the path of the repo:
 
-`dotnet new -i "$PATH_OF_NUSPEC_FILE"`
+`dotnet new -i "$PATH_OF_NUPKG_FILE"`
 
 Once installed as a template you can properly create your own custom projects using the template using the following command:
 
@@ -35,31 +35,32 @@ It will generate the following folder structure:
 ``` tree
 $
 .
-├── .babelrc
 ├── appsettings.Development.json
 ├── appsettings.json
-├── package.json
 ├── Program.cs
 ├── Startup.cs
-├── webpack.config.js
-├── webpack.config.vendor.js
 ├── {ProjectName}.csproj
 ├── /ClientApp
-│   ├── app.js
-│   ├── /assets
-│   │    └── logo.png
-│   ├── /build
-│   │    ├── client.js
-│   │    ├── server.js
-│   │    └── serverRender.js
-│   ├── /components
-│   │    └── App.vue
-│   ├── /css
-│   │    └── site.css
-│   ├── /router
-│   │    └── index.js
-│   └── /store
-│        └── store.js
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── babel.config.js
+│   ├── /public
+│   │    ├── favicon.ico
+│   │    └── index.html
+│   ├── /src
+│   │    ├── store.js
+│   │    ├── router.js
+│   │    ├── main.js
+│   │    ├── app.vue
+│   │    ├── /assets
+│   │    │    └── logo.png
+│   │    ├── /components
+│   │    │    └── helloworld.vue
+│   │    └── /views
+│   │         ├── home.vue
+│   │         └── about.vue
+│   │
+│   └── /node_modules
 ├── /Controllers
 │   └── MainController.cs
 └── /Views
