@@ -1,6 +1,6 @@
 # Vue Simple Template [![Mit License][mit-img]][mit]
 
-This template was created to use vue.js with asp.net core using the library [Javascript Script Services](https://github.com/aspnet/JavaScriptServices). It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template.
+This template was created to use vue.js with asp.net core using the [Spa Services](https://github.com/aspnet/JavaScriptServices) library. It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template.
 
 ## Builds
 
@@ -16,7 +16,7 @@ This template was created to use vue.js with asp.net core using the library [Jav
 
 ## Installation
 
-To install the template, simply use nuget:
+To install the template, via commandline simply using nuget:
 
 `dotnet new -i "Vue.Simple.Template::*"`
 
@@ -77,16 +77,13 @@ cd MyAppName
 npm install
 ```
 
-Using the SpaServices from AspNet Core it will execute the webpack configurations once you build the site, or alternatively you can execute npm run dev from the command line. Verify the commands defined on the package.json for details.
+The ClientApp folder includes the default project created using the vue-cli 3.0. You can (optionally) replace the contents of the clientApp folder with your own custom vue project, since this template interacts directly with the vue commands, for building and debugging purposes.
 
 ---
 
-For the full fledge Vue Spa Service template, check ~~[here](https://github.com/aspnet/templating/tree/dev/src/Microsoft.AspNetCore.SpaTemplates/content/Vue-CSharp)~~
-__*Note on the ms template:*__ the template has been announced as retired by the [ms team](https://github.com/aspnet/Announcements/issues/289)
-
 ## Uninstalling
 
-The syntax for uninstalling is the following:
+The syntax for uninstalling from the command line is the following:
 
 `dotnet new -u "Vue.Simple.Template"`
 
