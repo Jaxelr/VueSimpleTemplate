@@ -63,12 +63,11 @@ namespace VueTemplate
             app.UseSpa(spa =>
             {
                 spa.Options.SourcePath = "ClientApp";
-#if DEBUG
+
                 if (env.IsDevelopment())
                 {
                     spa.UseVueCli(npmScript: "serve", port: 8080); // optional port
                 }
-#endif
             });
         }
     }
