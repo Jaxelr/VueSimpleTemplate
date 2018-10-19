@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Vue.Simple.Template</id>
-    <version>0.2.1</version>
+    <version>0.2.2</version>
     <title>Vue dotnet new templates</title>
     <description>A barebone template for Vue Js using Asp.Net Core 2+</description>
     <authors>Jaxel Rojas</authors>
@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/Jaxelr/VueTemplate</projectUrl>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Update to usage of vue-cli 3.0 and webpack 4</releaseNotes>
+    <releaseNotes>Update AspNetCore.App to version 2.1.2</releaseNotes>
     <copyright>2017</copyright>
     <tags>template;vue;vuejs</tags>
     <language>en-US</language>
