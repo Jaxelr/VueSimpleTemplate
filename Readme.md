@@ -35,6 +35,7 @@ It will generate the following folder structure:
 ``` tree
 $
 .
+├── .editorconfig
 ├── appsettings.Development.json
 ├── appsettings.json
 ├── Program.cs
