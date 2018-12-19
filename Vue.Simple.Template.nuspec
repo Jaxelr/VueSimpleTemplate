@@ -2,15 +2,15 @@
 <package>
   <metadata>
     <id>Vue.Simple.Template</id>
-    <version>0.2.3</version>
+    <version>0.3.0</version>
     <title>Vue dotnet new templates</title>
-    <description>A barebone template for Vue Js using Asp.Net Core 2+</description>
+    <description>A barebones template for Vue Js using Asp.Net Core 2+</description>
     <authors>Jaxel Rojas</authors>
     <owners>Jaxel Rojas</owners>
     <projectUrl>https://github.com/Jaxelr/VueTemplate</projectUrl>
-    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <license type="expression">MIT</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Added .editorconfig</releaseNotes>
+    <releaseNotes>Update to netcore 2.2</releaseNotes>
     <copyright>2017</copyright>
     <tags>template;vue;vuejs</tags>
     <language>en-US</language>
@@ -19,6 +19,7 @@
     </packageTypes>
   </metadata>
   <files>
+    <file src="LICENSE" target="License" />
     <file src="Content\**" exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\node_modules\**;**\.vscode\**" target="content"/>
   </files>
 </package>
