@@ -8,7 +8,7 @@
     <authors>Jaxel Rojas</authors>
     <owners>Jaxel Rojas</owners>
     <projectUrl>https://github.com/Jaxelr/VueTemplate</projectUrl>
-    <license type="expression">MIT</license>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>Update to netcore 2.2</releaseNotes>
     <copyright>2017</copyright>
