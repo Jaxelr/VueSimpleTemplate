@@ -2,6 +2,8 @@
 
 This template was created to use vue.js with asp.net core using the [Spa Services](https://github.com/aspnet/JavaScriptServices) library. It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template.
 
+This template targets netcore 2.2.
+
 ## Builds
 
 | Appveyor  |
@@ -41,6 +43,7 @@ $
 ├── Program.cs
 ├── Startup.cs
 ├── {ProjectName}.csproj
+├── {ProjectName}.sln
 ├── /ClientApp
 │   ├── package.json
 │   ├── package-lock.json
@@ -67,6 +70,8 @@ $
 └── /Views
     ├── _ViewStart.cshtml
     ├── _ViewImports.cshtml
+    ├── /Shared
+    │    └── _Layout.cshtml
     └── /Main
          └── Index.cshtml
 ```
@@ -79,6 +84,8 @@ npm install
 ```
 
 The ClientApp folder includes the default project created using the vue-cli 3.0. You can (optionally) replace the contents of the clientApp folder with your own custom vue project, since this template interacts directly with the vue commands, for building and debugging purposes.
+
+For more information on how to interact with the new vue-cli 3.0, you can [check this tutorial](https://www.vuemastery.com/courses/real-world-vue-js/vue-cli/) 
 
 ---
 
@@ -108,3 +115,4 @@ Check the [contribution guide](https://github.com/Jaxelr/VueSimpleTemplate/blob/
 [nuget]: https://www.nuget.org/packages/Vue.Simple.Template/
 [myget-img]: https://img.shields.io/myget/vue-simple-template/v/Vue.Simple.Template.svg
 [myget]: https://www.myget.org/feed/vue-simple-template/package/nuget/Vue.Simple.Template
+
