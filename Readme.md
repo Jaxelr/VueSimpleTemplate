@@ -1,6 +1,6 @@
 # Vue Simple Template [![Mit License][mit-img]][mit]
 
-This template was created to use vue.js with asp.net core using the [Spa Services](https://github.com/aspnet/JavaScriptServices) library. It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template.
+This template was created to use vue.js with asp.net core using the [Javascript Services](https://github.com/aspnet/AspNetCore/tree/master/src/JavaScriptServices) library. It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template.
 
 This template targets netcore 2.2.
 
