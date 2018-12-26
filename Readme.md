@@ -109,8 +109,8 @@ Check the [contribution guide](https://github.com/Jaxelr/VueSimpleTemplate/blob/
 
 [mit-img]: http://img.shields.io/badge/License-MIT-blue.svg
 [mit]: https://github.com/Jaxelr/VueSimpleTemplate/blob/master/LICENSE
-[build-img]: https://ci.appveyor.com/api/projects/status/vvnkjjckfv6v1dgk?svg=true
-[build]: https://ci.appveyor.com/project/Jaxelr/vuetemplate
+[build-img]: https://ci.appveyor.com/api/projects/status/vvnkjjckfv6v1dgk/branch/master?svg=true
+[build]: https://ci.appveyor.com/project/Jaxelr/vuetemplate/branch/master
 [nuget-img]: https://img.shields.io/nuget/v/Vue.Simple.Template.svg
 [nuget]: https://www.nuget.org/packages/Vue.Simple.Template/
 [myget-img]: https://img.shields.io/myget/vue-simple-template/v/Vue.Simple.Template.svg
