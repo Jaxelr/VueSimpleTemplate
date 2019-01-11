@@ -11,7 +11,7 @@
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>Update to netcore 2.2</releaseNotes>
-    <copyright>2017</copyright>
+    <copyright>2019</copyright>
     <tags>template;vue;vuejs</tags>
     <language>en-US</language>
     <packageTypes>
