@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Vue.Simple.Template</id>
-    <version>0.3.1</version>
+    <version>0.3.2</version>
     <title>Vue dotnet new templates</title>
     <description>A barebones template for Vue Js using Asp.Net Core 2+</description>
     <authors>Jaxel Rojas</authors>
