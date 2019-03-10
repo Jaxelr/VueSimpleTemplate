@@ -1,14 +1,15 @@
 # Vue Simple Template [![Mit License][mit-img]][mit]
 
-This template was created to use vue.js with asp.net core using the [Javascript Services](https://github.com/aspnet/AspNetCore/tree/master/src/JavaScriptServices) library. It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template.
+This template was created to interact with a vue.js project inside an asp.net core app using the [Javascript Services](https://github.com/aspnet/AspNetCore/tree/master/src/JavaScriptServices) library. It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template.
 
 This template targets netcore 2.2.
 
 ## Builds
 
-| Appveyor  |
-| :---:     |
-| [![Build status][build-img]][build] |
+| Appveyor  | Branch |
+| :---:     | :---: |
+| [![Build status][build-master-img]][build-master] | master |
+| [![Build status][build-develop-img]][build-develop] | develop |
 
 ## Packages
 
@@ -109,10 +110,11 @@ Check the [contribution guide](https://github.com/Jaxelr/VueSimpleTemplate/blob/
 
 [mit-img]: http://img.shields.io/badge/License-MIT-blue.svg
 [mit]: https://github.com/Jaxelr/VueSimpleTemplate/blob/master/LICENSE
-[build-img]: https://ci.appveyor.com/api/projects/status/vvnkjjckfv6v1dgk/branch/master?svg=true
-[build]: https://ci.appveyor.com/project/Jaxelr/vuetemplate/branch/master
+[build-master-img]: https://ci.appveyor.com/api/projects/status/vvnkjjckfv6v1dgk/branch/master?svg=true
+[build-master]: https://ci.appveyor.com/project/Jaxelr/vuetemplate/branch/master
+[build-develop-img]: https://ci.appveyor.com/api/projects/status/vvnkjjckfv6v1dgk/branch/develop?svg=true
+[build-develop]: https://ci.appveyor.com/project/Jaxelr/vuetemplate/branch/develop
 [nuget-img]: https://img.shields.io/nuget/v/Vue.Simple.Template.svg
 [nuget]: https://www.nuget.org/packages/Vue.Simple.Template/
 [myget-img]: https://img.shields.io/myget/vue-simple-template/v/Vue.Simple.Template.svg
 [myget]: https://www.myget.org/feed/vue-simple-template/package/nuget/Vue.Simple.Template
-
