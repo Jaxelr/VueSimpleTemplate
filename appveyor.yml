@@ -1,4 +1,4 @@
-version: '0.3.2.{build}'
+version: '0.3.3.{build}'
 image: Visual Studio 2017
 branches:
   only:
@@ -22,8 +22,7 @@ deploy:
 - provider: NuGet
   server: https://www.myget.org/F/vue-simple-template/api/v2/package
   on:
-    branch: master  
-    appveyor_repo_tag: true
+    branch: develop  
   api_key:
     secure: 6xhHSsDvB9arsrSDLuynnbxaVS+BwaoJU96RfQenc5FOnUYvP8SHM6kbvrmpvja2
   skip_symbols: true
