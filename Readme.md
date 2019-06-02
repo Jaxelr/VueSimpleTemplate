@@ -17,9 +17,13 @@ This template targets netcore 2.2.
 | :---: | :---: |
 | [![NuGet][nuget-img]][nuget] | [![MyGet][myget-img]][myget] |
 
+## Prerequisites
+
+You must have dotnetcore 2.2 or later installed. 
+
 ## Installation
 
-To install the template, via commandline simply using nuget:
+To install the template, via command line simply using nuget:
 
 `dotnet new -i "Vue.Simple.Template::*"`
 
