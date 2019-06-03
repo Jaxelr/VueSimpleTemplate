@@ -13,6 +13,7 @@
     <copyright>2019</copyright>
     <tags>template;vue;vuejs</tags>
     <language>en-US</language>
+    <license type="expression">MIT</license>
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
