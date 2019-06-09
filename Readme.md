@@ -19,7 +19,7 @@ This template targets netcore 2.2.
 
 ## Prerequisites
 
-You must have dotnetcore 2.2 or later installed. 
+You must have dotnetcore 2.2 or later installed.
 
 ## Installation
 
