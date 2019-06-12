@@ -53,6 +53,7 @@ $
 │   ├── package.json
 │   ├── package-lock.json
 │   ├── babel.config.js
+│   ├── vue.config.js
 │   ├── /public
 │   │    ├── favicon.ico
 │   │    └── index.html
@@ -60,14 +61,14 @@ $
 │   │    ├── store.js
 │   │    ├── router.js
 │   │    ├── main.js
-│   │    ├── app.vue
+│   │    ├── App.vue
 │   │    ├── /assets
 │   │    │    └── logo.png
 │   │    ├── /components
-│   │    │    └── helloworld.vue
+│   │    │    └── HelloWorld.vue
 │   │    └── /views
-│   │         ├── home.vue
-│   │         └── about.vue
+│   │         ├── Home.vue
+│   │         └── About.vue
 │   │
 │   └── /node_modules
 ├── /Controllers
