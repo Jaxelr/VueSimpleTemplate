@@ -33,6 +33,10 @@ If you would like to tinker with the code locally, you can clone the repository 
 
 `dotnet new -i "$PATH_OF_NUPKG_FILE"`
 
+Alternatively, you can use the myget prerelease package, by installing using the following command:
+
+`dotnet new -i "Vue.Simple.Template::*" --nuget-source https://www.myget.org/F/vue-simple-template/api/v3/index.json`
+
 Once installed as a template you can properly create your own custom projects using the template using the following command:
 
 `dotnet new simplevue -o MyAppName`
