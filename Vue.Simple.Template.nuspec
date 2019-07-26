@@ -8,6 +8,7 @@
     <authors>Jaxel Rojas</authors>
     <owners>Jaxel Rojas</owners>
     <projectUrl>https://github.com/Jaxelr/VueTemplate</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Jaxelr/VueSimpleTemplate/master/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>Security fixes for ClientApp</releaseNotes>
     <copyright>2019</copyright>
