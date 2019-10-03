@@ -1,14 +1,19 @@
 version: '0.3.7.{build}'
 image: Visual Studio 2019
+environment:
+  nodejs_version: "11"
 branches:
   only:
   - master
   - develop
 init:
   - cmd: git config --global core.autocrlf true
+install:
+  - ps: Install-Product node $env:nodejs_version  
 before_build:
   - cmd: dotnet --version
-  - choco install nodejs
+  - cmd: node --version
+  - cmd: npm --version
 build_script:
   - cmd: dotnet publish ./Content/Vue.Simple.Template.sln -v quiet
 after_build:
