@@ -14,6 +14,7 @@ before_build:
   - cmd: dotnet --version
   - cmd: node --version
   - cmd: npm --version
+  - choco install nuget.commandline
   - cmd: nuget
 build_script:
   - cmd: dotnet publish ./Content/Vue.Simple.Template.sln -v quiet
