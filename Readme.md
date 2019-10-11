@@ -2,7 +2,7 @@
 
 This template was created to interact with a vue.js project inside an asp.net core app using the [Spa Services](https://github.com/aspnet/AspNetCore/tree/7269dbb73f4aa0ebf5ebb8bc07a076ee181851be/src/Middleware/SpaServices) library. It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template.
 
-This template targets netcore 2.2.
+This template targets netcore 3.0.
 
 ## Builds
 
@@ -19,7 +19,7 @@ This template targets netcore 2.2.
 
 ## Prerequisites
 
-You must have dotnetcore 2.2 or later installed.
+You must have dotnetcore 3.0 or later installed.
 
 ## Installation
 
@@ -95,7 +95,7 @@ npm install
 
 The ClientApp folder includes the default project created using the vue-cli 3.0. You can (optionally) replace the contents of the clientApp folder with your own custom vue project, since this template interacts directly with the vue commands, for building and debugging purposes.
 
-For more information on how to interact with the new vue-cli 3.0, you can [check this tutorial](https://www.vuemastery.com/courses/real-world-vue-js/vue-cli/) 
+For more information on how to interact with the new vue-cli 3.0, you can [check this tutorial](https://www.vuemastery.com/courses/real-world-vue-js/vue-cli/)
 
 ---
 
@@ -109,13 +109,17 @@ Or
 
 `dotnet new -u "$PATH_OF_NUPKG_FILE"`
 
+## Previous Versions
+
+The latest version that targets netcore 2.2 is template v3.6, still available in nuget
+
 ### Further info
 
-For More information on how to manage dotnet custom templates see the [docs.microsoft documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates).
+For More information on how to manage dotnet custom templates see the [docs.microsoft documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates)
 
 ## Contributing
 
-Check the [contribution guide](https://github.com/Jaxelr/VueSimpleTemplate/blob/master/.github/CONTRIBUTING.md).
+Check the [contribution guide](https://github.com/Jaxelr/VueSimpleTemplate/blob/master/.github/CONTRIBUTING.md)
 
 [mit-img]: http://img.shields.io/badge/License-MIT-blue.svg
 [mit]: https://github.com/Jaxelr/VueSimpleTemplate/blob/master/LICENSE
