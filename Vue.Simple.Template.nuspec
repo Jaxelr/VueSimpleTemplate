@@ -2,15 +2,15 @@
 <package>
   <metadata>
     <id>Vue.Simple.Template</id>
-    <version>0.3.7</version>
+    <version>0.4.0</version>
     <title>Vue dotnet new templates</title>
-    <description>A barebones template for Vue Js using Asp.Net Core 2+</description>
+    <description>A minimal template for Vue Js using Asp.Net Core 3+</description>
     <authors>Jaxel Rojas</authors>
     <owners>Jaxel Rojas</owners>
     <projectUrl>https://github.com/Jaxelr/VueTemplate</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/Jaxelr/VueSimpleTemplate/master/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Upgrade to netcore 3.0</releaseNotes>
+    <releaseNotes>Fixing upgrade to netcore 3.0</releaseNotes>
     <copyright>2019</copyright>
     <tags>template;vue;vuejs</tags>
     <language>en-US</language>
