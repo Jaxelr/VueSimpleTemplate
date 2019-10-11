@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.SpaServices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -47,34 +48,20 @@ namespace VueTemplate
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/Main/Error");
-                app.UseHsts();
-                app.UseHttpsRedirection();
-                app.UseCookiePolicy();
-            }
+
+            app.UseHttpsRedirection();
 
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
-            app.UseMvc(routes =>
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Main}/{action=Index}/{id?}");
-
-                routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Main", action = "Index" });
-            });
-
-            app.UseSpa(spa =>
-            {
-                spa.Options.SourcePath = "ClientApp";
-
-                if (env.IsDevelopment())
-                {
-                    spa.UseVueCli(npmScript: "serve", port: 8080); // optional port
-                }
+                endpoints.MapControllers();
+                endpoints.MapToVueCliProxy(new SpaOptions { SourcePath = "ClientApp" }, npmScript: "serve", port: 8080);
             });
         }
     }
