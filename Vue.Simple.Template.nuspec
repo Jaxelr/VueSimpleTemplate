@@ -8,7 +8,7 @@
     <authors>Jaxel Rojas</authors>
     <owners>Jaxel Rojas</owners>
     <projectUrl>https://github.com/Jaxelr/VueTemplate</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/Jaxelr/VueSimpleTemplate/master/icon.png</iconUrl>
+    <icon>icon.png</icon>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>Target to netcore 3.0</releaseNotes>
     <copyright>2019</copyright>
@@ -21,5 +21,6 @@
   </metadata>
   <files>
     <file src="Content\**" exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\node_modules\**;**\.vscode\**;*.gitkeep" target="content"/>
+    <file src="icon.png" target="" />
   </files>
 </package>
