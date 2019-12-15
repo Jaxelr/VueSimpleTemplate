@@ -33,6 +33,8 @@ namespace VueTemplate
 
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
 
+            services.AddControllersWithViews();
+
             services.AddLogging(opt =>
             {
                 opt.AddConsole();
@@ -48,6 +50,10 @@ namespace VueTemplate
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
 
             app.UseHttpsRedirection();
 
@@ -60,7 +66,9 @@ namespace VueTemplate
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+               endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapToVueCliProxy(new SpaOptions { SourcePath = "ClientApp" }, npmScript: "serve", port: 8080);
             });
         }
