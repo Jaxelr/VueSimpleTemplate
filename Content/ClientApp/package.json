@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-template",
-  "version": "0.4.1",
+  "version": "0.4.3",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
