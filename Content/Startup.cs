@@ -65,7 +65,7 @@ namespace VueTemplate
             {
                endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Main}/{action=Index}/{id?}");
                 endpoints.MapToVueCliProxy(new SpaOptions { SourcePath = "ClientApp" }, npmScript: "serve", port: 8080);
             });
         }
