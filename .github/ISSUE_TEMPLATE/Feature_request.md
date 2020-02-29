@@ -1,7 +1,6 @@
 ---
 name: Feature request
 about: Suggest a new feature or enhancement for this project
-
 ---
 
 # Describe the feature

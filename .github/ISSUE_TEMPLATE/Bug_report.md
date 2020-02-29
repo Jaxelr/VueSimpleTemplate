@@ -1,7 +1,6 @@
 ---
 name: Bug report
 about: Report an issue you're experiencing
-
 ---
 
 # Describe the bug

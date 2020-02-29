@@ -1,7 +1,6 @@
 ---
 name: Support
 about: Ask a question or request help with the library
-
 ---
 
 # Describe the question
