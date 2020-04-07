@@ -19,7 +19,7 @@ This template targets netcore 3.1.
 
 ## Prerequisites
 
-You must have dotnetcore 3.1 or later installed.
+You must have dotnetcore 3.1 or later installed. Also, Node.js (12+) (and npm) must exist in order to use the Vue Client App. The project will not compile if Node.js doesn't exists.
 
 ## Installation
 
@@ -96,6 +96,8 @@ npm install
 The ClientApp folder includes the default project created using the vue-cli 3.0. You can (optionally) replace the contents of the clientApp folder with your own custom vue project, since this template interacts directly with the vue commands, for building and debugging purposes.
 
 For more information on how to interact with the new vue-cli 3.0, you can [check this tutorial](https://www.vuemastery.com/courses/real-world-vue-js/vue-cli/)
+
+Vue-Cli also has the ability to scaffold an app using [vue ui](https://scotch.io/tutorials/creating-vue-apps-with-the-vue-ui-tool) which is an alternative to the command line vue installation.
 
 ---
 
