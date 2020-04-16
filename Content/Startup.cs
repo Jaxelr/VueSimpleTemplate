@@ -66,17 +66,19 @@ namespace VueTemplate
                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Main}/{action=Index}/{id?}");
-#if DEBUG
-                endpoints.MapToVueCliProxy
-                (
-                    "{*path}",
-                    new SpaOptions { SourcePath = "ClientApp" },
-                    npmScript: "serve",
-                    regex: "Compiled successfully",
-                    port: port,
-                    forceKill: true
-                );
-#endif
+
+                if (System.Diagnostics.Debugger.IsAttached)
+                {
+                    endpoints.MapToVueCliProxy
+                    (
+                        "{*path}",
+                        new SpaOptions { SourcePath = "ClientApp" },
+                        npmScript: "serve",
+                        regex: "Compiled successfully",
+                        port: port,
+                        forceKill: true
+                    );
+                }
             });
         }
     }

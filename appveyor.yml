@@ -17,7 +17,7 @@ before_build:
 build_script:
   - cmd: dotnet build ./Content/Vue.Simple.Template.sln -v quiet 
 after_build:
-  - cmd: nuget pack -verbosity quiet -Properties Configuration=Debug
+  - cmd: nuget pack -verbosity quiet 
 artifacts:
   - path: '**/*.nupkg'
 skip_commits:
