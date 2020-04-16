@@ -19,7 +19,7 @@
     </packageTypes>
   </metadata>
   <files>
-    <file src="Content\**" exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\node_modules\**;**\.vscode\**;*.gitkeep" target="content"/>
+    <file src="Content\**" exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\node_modules\**;**\.vscode\**;**\wwwroot\**" target="content"/>
     <file src="icon.png" target="" />
   </files>
 </package>

@@ -15,7 +15,7 @@ before_build:
   - cmd: node --version
   - cmd: npm --version
 build_script:
-  - cmd: dotnet publish ./Content/Vue.Simple.Template.sln -v quiet
+  - cmd: dotnet build ./Content/Vue.Simple.Template.sln -v quiet 
 after_build:
   - cmd: nuget pack -verbosity quiet
 artifacts:
