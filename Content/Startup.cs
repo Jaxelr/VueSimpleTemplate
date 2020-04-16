@@ -27,7 +27,6 @@ namespace VueTemplate
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
             services.AddSpaStaticFiles(configuration => configuration.RootPath = "ClientApp/dist");
 
             services.AddControllersWithViews();
@@ -51,7 +50,7 @@ namespace VueTemplate
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Main/Error");
                 app.UseHsts();
             }
 
@@ -67,7 +66,15 @@ namespace VueTemplate
                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Main}/{action=Index}/{id?}");
-                endpoints.MapToVueCliProxy(new SpaOptions { SourcePath = "ClientApp" }, npmScript: "serve", port: port);
+                endpoints.MapToVueCliProxy
+                (
+                    "{*path}",
+                    new SpaOptions { SourcePath = "ClientApp" },
+                    npmScript: (System.Diagnostics.Debugger.IsAttached) ? "serve" : null,
+                    regex: "Compiled successfully",
+                    port: port,
+                    forceKill: true
+                );
             });
         }
     }
