@@ -19,7 +19,7 @@ This template targets netcore 3.1.
 
 ## Prerequisites
 
-You must have dotnetcore 3.1 or later installed. Also, Node.js (12+) (and npm) must exist in order to use the Vue Client App. The project will not compile if Node.js doesn't exists.
+You must have dotnetcore 3.1 installed. It also depends on Node.js (version 12) and npm (version 6) must exist in order to use the Vue Client App. The project will not compile if Node.js or Npm aren't present.
 
 ## Installation
 
@@ -117,11 +117,12 @@ The table below includes the latest template version alongside the netcore versi
 
 | netcore version | template version |
 | -- | -- |
+| 3.1 | 4.2 |
 | 3.0 | 4.1 |
 | 2.2 | 3.6 |
 | 2.1 | 2.3 |
 
-These are available on nuget
+These are all available on nuget
 
 ### Further info
 
