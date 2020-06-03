@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageType>Template</PackageType>
+    <IsPackable>true</IsPackable>
+    <PackageVersion>0.4.4</PackageVersion>
+    <PackageId>Vue.Simple.Template</PackageId>
+    <Title>Vue dotnet new templates</Title>
+    <Authors>Jaxel Rojas</Authors>    
+    <Description>A minimal template for Vue Js using Asp.Net Core 3</Description>
+    <PackageTags>template;vue;vuejs</PackageTags>
+    <PackageProjectUrl>https://github.com/Jaxelr/VueSimpleTemplate</PackageProjectUrl>    
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>Content</ContentTargetFolders>    
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <NoWarn>NU5128</NoWarn>    
+    <PackageReleaseNotes>Target to netcore 3.1</PackageReleaseNotes>
+    <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Content\**" Exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\node_modules\**;**\.vscode\**;**\wwwroot\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+</Project>
