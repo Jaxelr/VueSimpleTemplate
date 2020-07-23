@@ -117,10 +117,10 @@ The table below includes the latest template version alongside the netcore versi
 
 | netcore version | template version |
 | -- | -- |
-| 3.1 | 4.4 |
-| 3.0 | 4.1 |
-| 2.2 | 3.6 |
-| 2.1 | 2.3 |
+| 3.1 | 0.4.4 |
+| 3.0 | 0.4.1 |
+| 2.2 | 0.3.6 |
+| 2.1 | 0.2.3 |
 
 These are all available on nuget
 
