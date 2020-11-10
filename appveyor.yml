@@ -1,4 +1,4 @@
-version: '0.4.4.{build}'
+version: '0.5.0.{build}'
 image: Visual Studio 2019
 environment:
   nodejs_version: "12"
@@ -9,15 +9,15 @@ branches:
 init:
   - cmd: git config --global core.autocrlf true
 install:
-  - ps: Install-Product node $env:nodejs_version  
+  - ps: Install-Product node $env:nodejs_version
 before_build:
   - cmd: dotnet --version
   - cmd: node --version
   - cmd: npm --version
 build_script:
-  - cmd: dotnet build ./Content/Vue.Simple.Template.sln -v quiet 
+  - cmd: dotnet build ./Content/Vue.Simple.Template.sln -v quiet
 after_build:
-  - cmd: dotnet pack Vue.Simple.Project.Template.csproj -v quiet 
+  - cmd: dotnet pack Vue.Simple.Project.Template.csproj -v quiet
 artifacts:
   - path: '**/*.nupkg'
 skip_commits:
@@ -27,8 +27,8 @@ deploy:
 - provider: NuGet
   server: https://www.myget.org/F/vue-simple-template/api/v2/package
   on:
-    branch: develop  
-    appveyor_repo_tag: true    
+    branch: develop
+    appveyor_repo_tag: true
   api_key:
     secure: 6xhHSsDvB9arsrSDLuynnbxaVS+BwaoJU96RfQenc5FOnUYvP8SHM6kbvrmpvja2
   skip_symbols: false
