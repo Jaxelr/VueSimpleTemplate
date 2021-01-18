@@ -1,15 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageType>Template</PackageType>
     <IsPackable>true</IsPackable>
-    <PackageVersion>0.5.0</PackageVersion>
+    <PackageVersion>0.6.0</PackageVersion>
     <PackageId>Vue.Simple.Template</PackageId>
     <Title>Vue dotnet new templates</Title>
     <Authors>Jaxel Rojas</Authors>
-    <Description>A minimal template for Vue Js using Asp.Net Core 3</Description>
+    <Description>A minimal template for Vue Js using Asp.Net 5</Description>
     <PackageTags>template;vue;vuejs</PackageTags>
     <PackageProjectUrl>https://github.com/Jaxelr/VueSimpleTemplate</PackageProjectUrl>
     <IncludeContentInPack>true</IncludeContentInPack>
@@ -17,7 +17,7 @@
     <ContentTargetFolders>Content</ContentTargetFolders>
     <NoDefaultExcludes>true</NoDefaultExcludes>
     <NoWarn>NU5128</NoWarn>
-    <PackageReleaseNotes>Target to netcore 3.1</PackageReleaseNotes>
+    <PackageReleaseNotes>Target to net 5.0</PackageReleaseNotes>
     <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
