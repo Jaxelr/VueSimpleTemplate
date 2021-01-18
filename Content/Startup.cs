@@ -40,7 +40,7 @@ namespace VueTemplate
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            int.TryParse(Configuration.GetSection("ClientAppPort").Value, out int port);
+            bool success = int.TryParse(Configuration.GetSection("ClientAppPort").Value, out int port);
 
             if (env.IsDevelopment())
             {
