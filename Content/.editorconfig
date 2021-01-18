@@ -34,8 +34,10 @@ indent_size = 2
 trim_trailing_whitespace = false
 
 # Web Files
-[*.{htm,html,js,ts,tsx,css,sass,scss,less,svg,vue}]
+[*.{htm,html,js,jsx,ts,tsx,css,sass,scss,less,svg,vue}]
+indent_style = space
 indent_size = 2
+trim_trailing_whitespace = true
 insert_final_newline = true
 
 # Batch Files
@@ -52,6 +54,7 @@ csharp_indent_block_contents = true
 csharp_indent_braces = false
 csharp_indent_case_contents = true
 csharp_indent_switch_labels = true
+
 # New Lines
 csharp_new_line_before_catch = true
 csharp_new_line_before_else = true
@@ -62,6 +65,7 @@ csharp_new_line_before_open_brace = all
 csharp_new_line_between_query_expression_clauses = true
 csharp_preserve_single_line_blocks = true
 csharp_preserve_single_line_statements = true
+
 # Space Management
 csharp_space_after_cast = true
 csharp_space_after_colon_in_inheritance_clause = true
@@ -84,6 +88,7 @@ csharp_space_between_method_declaration_empty_parameter_list_parentheses = false
 csharp_space_between_method_declaration_name_and_open_parenthesis = false
 csharp_space_between_method_declaration_parameter_list_parentheses = false
 csharp_space_between_square_brackets = false
+
 # C# Language Style
 csharp_style_conditional_delegate_call = true:suggestion
 csharp_style_expression_bodied_accessors = true:suggestion
@@ -97,8 +102,10 @@ csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 csharp_style_throw_expression = true:suggestion
 csharp_style_var_for_built_in_types = false:suggestion
 csharp_style_var_when_type_is_apparent = true:suggestion
+
 # Organize usings
 dotnet_sort_system_directives_first = true
+
 # Dotnet Style
 dotnet_style_coalesce_expression = true:suggestion
 dotnet_style_collection_initializer = true:suggestion
