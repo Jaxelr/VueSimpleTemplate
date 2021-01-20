@@ -2,7 +2,7 @@
 
 This template was created to interact with a vue.js project inside an asp.net core app using the [Spa Services](https://github.com/aspnet/AspNetCore/tree/7269dbb73f4aa0ebf5ebb8bc07a076ee181851be/src/Middleware/SpaServices) library. It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template.
 
-This template targets netcore 3.1.
+This template targets net 5.0
 
 ## Builds
 
@@ -19,7 +19,7 @@ This template targets netcore 3.1.
 
 ## Prerequisites
 
-You must have dotnetcore 3.1 installed. It also depends on Node.js (version 12) and npm (version 6) must exist in order to use the Vue Client App. The project will not compile if Node.js or Npm aren't present.
+You must have net 5.0 installed. It also depends on Node.js (version 12) and npm (version 6) must exist in order to use the Vue Client App. The project will not compile if Node.js or Npm aren't present.
 
 ## Installation
 
@@ -115,9 +115,10 @@ Or
 
 The table below includes the latest template version alongside the netcore version which it targets
 
-| netcore version | template version |
+| net(core) version | template version |
 | -- | -- |
-| 3.1 | 0.4.4 |
+| 5.0 | latest |
+| 3.1 | 0.5.0 |
 | 3.0 | 0.4.1 |
 | 2.2 | 0.3.6 |
 | 2.1 | 0.2.3 |
