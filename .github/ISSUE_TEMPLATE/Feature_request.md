@@ -1,11 +1,15 @@
 ---
-name: Feature request
-about: Suggest a new feature or enhancement for this project
+name: "\U0001F4A1 Feature request"
+about: Suggest a new feature for this project
+title: ''
+labels: enhancement
+assignees: Jaxelr
+
 ---
 
 # Describe the feature
 
-<!-- A description of what the bug is. -->
+<!-- A description of what the requested feature should be -->
 
 ## Is this feature related to a problem, describe
 
@@ -13,4 +17,4 @@ about: Suggest a new feature or enhancement for this project
 
 ## Additional context
 
-<!-- Add any other context or screenshots about the feature request here. -->
+<!-- Add any other context or screenshots about the feature request here -->
