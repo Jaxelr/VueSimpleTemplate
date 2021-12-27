@@ -117,7 +117,7 @@ The table below includes the latest template version alongside the netcore versi
 
 | net(core) version | template version |
 | -- | -- |
-| 5.0 | latest |
+| 5.0 | 0.6.0 |
 | 3.1 | 0.5.0 |
 | 3.0 | 0.4.1 |
 | 2.2 | 0.3.6 |
