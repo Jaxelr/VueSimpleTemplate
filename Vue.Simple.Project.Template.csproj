@@ -5,7 +5,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageType>Template</PackageType>
     <IsPackable>true</IsPackable>
-    <PackageVersion>0.6.0</PackageVersion>
+    <PackageVersion>0.6.1</PackageVersion>
     <PackageId>Vue.Simple.Template</PackageId>
     <Title>Vue dotnet new templates</Title>
     <Authors>Jaxel Rojas</Authors>
