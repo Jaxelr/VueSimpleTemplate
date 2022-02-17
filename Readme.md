@@ -9,7 +9,6 @@ This template targets net 5.0
 | Appveyor  | Branch |
 | :---:     | :---: |
 | [![Build status][build-master-img]][build-master] | master |
-| [![Build status][build-develop-img]][build-develop] | develop |
 
 ## Packages
 
@@ -137,8 +136,6 @@ Check the [contribution guide](https://github.com/Jaxelr/VueSimpleTemplate/blob/
 [mit]: https://github.com/Jaxelr/VueSimpleTemplate/blob/master/LICENSE
 [build-master-img]: https://ci.appveyor.com/api/projects/status/vvnkjjckfv6v1dgk/branch/master?svg=true
 [build-master]: https://ci.appveyor.com/project/Jaxelr/vuetemplate/branch/master
-[build-develop-img]: https://ci.appveyor.com/api/projects/status/vvnkjjckfv6v1dgk/branch/develop?svg=true
-[build-develop]: https://ci.appveyor.com/project/Jaxelr/vuetemplate/branch/develop
 [nuget-img]: https://img.shields.io/nuget/v/Vue.Simple.Template.svg
 [nuget]: https://www.nuget.org/packages/Vue.Simple.Template/
 [myget-img]: https://img.shields.io/myget/vue-simple-template/v/Vue.Simple.Template.svg
