@@ -1,4 +1,4 @@
-module.exports = {
-    outputDir: "../wwwroot/ClientApp",
-    filenameHashing: false
-}
+const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({
+  transpileDependencies: true
+})

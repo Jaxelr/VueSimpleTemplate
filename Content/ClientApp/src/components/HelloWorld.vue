@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: 'VueTemplate',
+  name: 'HelloWorld',
   props: {
     msg: String
   }
