@@ -2,7 +2,7 @@
 
 This template was created to interact with a vue.js project inside an asp.net core app using the [Spa Services](https://github.com/aspnet/AspNetCore/tree/7269dbb73f4aa0ebf5ebb8bc07a076ee181851be/src/Middleware/SpaServices) library. It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template.
 
-This template targets net 5.0
+This template targets net 6.0
 
 ## Builds
 
@@ -18,7 +18,7 @@ This template targets net 5.0
 
 ## Prerequisites
 
-You must have net 5.0 installed. It also depends on Node.js (version 12) and npm (version 6) must exist in order to use the Vue Client App. The project will not compile if Node.js or Npm aren't present.
+You must have net 6.0 installed. It also depends on Node.js (version 14) and npm (version 6) must exist in order to use the Vue Client App. The project will not compile if Node.js or Npm aren't present.
 
 ## Installation
 
@@ -55,23 +55,19 @@ $
 ├── /ClientApp
 │   ├── package.json
 │   ├── package-lock.json
+│   ├── jsconfig.json
 │   ├── babel.config.js
 │   ├── vue.config.js
 │   ├── /public
 │   │    ├── favicon.ico
 │   │    └── index.html
 │   ├── /src
-│   │    ├── store.js
-│   │    ├── router.js
 │   │    ├── main.js
 │   │    ├── App.vue
 │   │    ├── /assets
 │   │    │    └── logo.png
-│   │    ├── /components
-│   │    │    └── HelloWorld.vue
 │   │    └── /views
-│   │         ├── Home.vue
-│   │         └── About.vue
+│   │         └── HelloWorld.vue
 │   │
 │   └── /node_modules
 ├── /Controllers
@@ -116,6 +112,7 @@ The table below includes the latest template version alongside the netcore versi
 
 | net(core) version | template version |
 | -- | -- |
+| 6.0 | 0.7.0 | 
 | 5.0 | 0.6.1 |
 | 3.1 | 0.5.0 |
 | 3.0 | 0.4.1 |
