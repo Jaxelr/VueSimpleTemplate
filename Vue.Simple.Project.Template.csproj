@@ -12,6 +12,7 @@
     <Description>A minimal template for Vue Js using .Net 6 as backend</Description>
     <PackageTags>template;vue;vuejs</PackageTags>
     <PackageProjectUrl>https://github.com/Jaxelr/VueSimpleTemplate</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Jaxelr/VueSimpleTemplate</RepositoryUrl>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>Content</ContentTargetFolders>
