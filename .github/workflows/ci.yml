@@ -24,7 +24,7 @@ jobs:
     - name: Pack
       run: dotnet pack Vue.Simple.Project.Template.csproj -v quiet -o $NUPKGS --include-symbols
     - name: Prep packages
-      run: dotnet nuget add source --username jaxelr --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github $GH_FEED
+      run: dotnet nuget add source --username jaxelr --password ${{ secrets.GH_PACKAGES_KEY }} --store-password-in-clear-text --name github $GH_FEED
     - name: Publish Github Package
       run: dotnet nuget push "$NUPKGS/*.nupkg" --skip-duplicate --source "github" -k ${{ secrets.GH_PACKAGES_KEY }}
 env:
