@@ -24,8 +24,11 @@ jobs:
       run: dotnet pack Vue.Simple.Project.Template.csproj -v quiet -o $NUPKGS --include-symbols
     - name: Publish to Github Package
       run: dotnet nuget push "$NUPKGS/*.nupkg" --skip-duplicate -s $GH_FEED -k ${{ secrets.GH_PACKAGES_KEY }}
+    - name: Publish to Myget Package
+      run: dotnet nuget push "$NUPKGS/*.nupkg" --skip-duplicate -s $MYGET_FEED -k ${{ secrets.MYGET_PACKAGES_KEY }}
 env:
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
   GH_FEED: https://nuget.pkg.github.com/jaxelr/index.json
+  MYGET_FEED: https://www.myget.org/F/vue-simple-template/api/v2/package
   NUPKGS: ./.nupkgs
