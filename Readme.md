@@ -1,5 +1,7 @@
 # Vue Simple Template [![Mit License][mit-img]][mit]
 
+> **Deprecated:** This template is deprecated. For new Vue projects with ASP.NET Core, use Microsoft's [ASP.NET Core with Vue tutorial](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-vue?view=visualstudio) instead.
+
 This template was created to interact with a vue.js project inside an asp.net core app using the [Spa Services](https://github.com/aspnet/AspNetCore/tree/7269dbb73f4aa0ebf5ebb8bc07a076ee181851be/src/Middleware/SpaServices) library. It aims to be minimalistic with its approach. It also favors Vue's single file component over Typescript, since one of the efforts is to minimize friction when transitioning from a vue-cli project into this template.
 
 This template targets net 6.0
